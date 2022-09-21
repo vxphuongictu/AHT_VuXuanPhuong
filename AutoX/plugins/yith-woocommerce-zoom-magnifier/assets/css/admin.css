@@ -1,0 +1,131 @@
+.yith_woocommerce_slider {
+	width: 300px;
+	float: left
+}
+
+.yith_woocommerce_slider_value {
+	margin-top: -5px;
+	margin-left: 10px;
+	width: 50px;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+}
+
+#eg-wrap .select_fake { /* solve back-end conflict with Essential Grid */
+	height: 24px;
+}
+
+.yith-plugins_page_yith_woocommerce_zoom-magnifier_panel .yith-plugin-fw-dimensions__dimensions{
+  max-width: 250px;
+}
+
+#yith_wcmg_slider_sizes .yith-plugin-fw-dimensions__linked{
+  display: none;
+}
+
+#yith_wcmg_slider_radius, #ywzm_zoom_icon_size, #ywzm_lightbox_icon_size, #yith_wcmg_zoom_radius, #yith_wcmg_lightbox_radius{
+  max-width: 75px;
+}
+
+
+.ywzm-admin-wrap-content{
+  background: white;
+  padding: 20px;
+}
+
+.yith-plugin-ui .ywzm-admin-wrap-content h2 {
+  border: 0;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: 0px;
+  padding: 0;
+}
+
+
+.ywzm-admin-no-posts {
+  text-align: center;
+  padding: 50px;
+}
+
+.ywzm-admin-no-posts-logo {
+  padding-bottom: 10px;
+}
+
+.ywzm-admin-no-posts-text {
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.ywzm-admin-no-posts a.page-title-action {
+  padding: 5px 30px !important;
+}
+
+.ywzm-admin-no-posts-text p {
+  font-size: 14px;
+  line-height: 1em;
+}
+
+.wrap-title {
+  display: flex;
+  align-items: center;
+}
+
+.yith-plugins_page_yith_woocommerce_zoom-magnifier_panel .ui-dialog-buttonpane .ui-button {
+  box-shadow: none;
+  background: #007694;
+  color: #fff;
+  border: 0;
+}
+
+
+table.excluded_categories td,
+table.excluded_categories th,
+table.excluded_products td,
+table.excluded_products th {
+  vertical-align: middle;
+}
+
+table.excluded_categories .column-image,
+table.excluded_products .column-image {
+  width: 52px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+table.excluded_categories .column-image img,
+table.excluded_products .column-image img {
+  margin: 0;
+  width: auto;
+  height: auto;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+table.excluded_categories .column-slug,
+table.excluded_categories .column-name {
+  width: 25%;
+}
+
+table.excluded_categories .column-count {
+  width: 74px;
+}
+
+table.excluded_categories .column-actions,
+table.excluded_products .column-actions {
+  width: 100px;
+}
+
+.wp-core-ui .yith-plugin-ui .ywzm-admin-wrap-content .button-secondary,
+.wp-core-ui .yith-plugin-ui .ywzm-admin-wrap-content .button-primary {
+  line-height: 30px;
+}
+.ywzm-admin-wrap-content {
+  background: white;
+  padding: 20px;
+}
+
+.ywzm-admin-wrap-content input#add {
+  margin-top: 7px;
+}

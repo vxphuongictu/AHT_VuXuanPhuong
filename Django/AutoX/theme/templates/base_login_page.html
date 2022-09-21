@@ -1,0 +1,52 @@
+{% load static %}
+<!doctype html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!-- style -->
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&#038;ver=6.0.2' media='all' />
+	<!-- end style -->
+
+	<!-- script -->
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src='https://kit.fontawesome.com/f1af41e397.js?ver=6.0.2' id='fontawesome-js'></script>
+	<!-- end script -->
+
+	<!-- static style -->
+	<link rel='stylesheet' href="{% static 'style/main-style.css' %}" media='all' />
+	<link rel='stylesheet' href="{% static 'style/loader.css' %}" media='all' />
+	<link rel='stylesheet' href="{% static 'style/responsive.css' %}" media='all' />
+	<!-- end static style -->
+
+	<!-- static script -->
+	<script src="{% static 'js/add-to-wishlist.js' %}"></script>
+    <script src="{% static 'js/countdown.js' %}"></script>
+    <script src="{% static 'js/countdown.js' %}"></script>
+    <script src="{% static 'js/main-js.js' %}"></script>
+    <script src="{% static 'js/loader.js' %}" ></script>
+    <script src="{% static 'js/search.js' %}"></script>
+    <script src="{% static 'js/mail.js' %}"></script>
+    <script src="{% static 'js/nav-menu.js' %}"></script>
+    <script src="{% static 'js/responsive.js' %}"></script>
+    <script src="{% static 'js/slider-single-product.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+	<!-- end static script -->
+    <title>{% block title %} {% endblock title %}</title>
+
+</head>
+
+<body class="home page-template page-template-homeForNoneUser page-template-homeForNoneUser-php page page-id-365 wp-custom-logo theme-monsterrat woocommerce-no-js">
+
+	<div class="loader">
+		<div class="line">
+			<span class="run"></span>
+		</div>
+	</div>
+
+{% block content %}{% endblock content %}
+
+</body>
+</html>

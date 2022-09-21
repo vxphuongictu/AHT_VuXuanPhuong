@@ -1,0 +1,544 @@
+2022-08-25T01:38:49+00:00 CRITICAL Uncaught Error: Call to a member function get_products_by_cat() on null in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php:91
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/shortcodes.php(356): header_search('', '', 'header_search')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(header...', 'do_shortcode_ta...', '[header_search]')
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/header.php(72): do_shortcode('[header_search]')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(770): require_once('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', true, Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 91
+
+2022-08-25T01:38:51+00:00 CRITICAL Uncaught Error: Call to a member function get_products_by_cat() on null in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php:91
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/shortcodes.php(356): header_search('', '', 'header_search')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(header...', 'do_shortcode_ta...', '[header_search]')
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/header.php(72): do_shortcode('[header_search]')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(770): require_once('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', true, Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 91
+
+2022-08-25T01:38:58+00:00 CRITICAL Uncaught Error: Call to a member function get_products_by_cat() on null in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php:91
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/shortcodes.php(356): header_search('', '', 'header_search')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(header...', 'do_shortcode_ta...', '[header_search]')
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/header.php(72): do_shortcode('[header_search]')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(770): require_once('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', true, Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 91
+
+2022-08-25T02:31:16+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T02:48:17+00:00 CRITICAL syntax error, unexpected '<' in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 118
+
+2022-08-25T02:48:32+00:00 CRITICAL syntax error, unexpected '<' in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 118
+
+2022-08-25T02:48:41+00:00 CRITICAL syntax error, unexpected '<' in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 118
+
+2022-08-25T02:48:42+00:00 CRITICAL syntax error, unexpected '<' in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 118
+
+2022-08-25T02:48:48+00:00 CRITICAL syntax error, unexpected '<' in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 118
+
+2022-08-25T02:49:13+00:00 CRITICAL syntax error, unexpected '<' in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 118
+
+2022-08-25T02:49:28+00:00 CRITICAL syntax error, unexpected '<' in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 118
+
+2022-08-25T03:12:53+00:00 CRITICAL Cannot redeclare medyplus_custom_style() (previously declared in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/Functions.php:7) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 21
+
+2022-08-25T03:12:53+00:00 CRITICAL Cannot redeclare medyplus_custom_style() (previously declared in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/Functions.php:7) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 21
+
+2022-08-25T03:13:02+00:00 CRITICAL Cannot redeclare medyplus_custom_style() (previously declared in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/Functions.php:7) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 21
+
+2022-08-25T03:13:15+00:00 CRITICAL Cannot redeclare medyplus_custom_style() (previously declared in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/Functions.php:7) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 21
+
+2022-08-25T03:13:17+00:00 CRITICAL Cannot redeclare medyplus_custom_style() (previously declared in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/Functions.php:7) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 21
+
+2022-08-25T03:13:17+00:00 CRITICAL Cannot redeclare medyplus_custom_style() (previously declared in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/Functions.php:7) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 21
+
+2022-08-25T03:13:17+00:00 CRITICAL Cannot redeclare medyplus_custom_style() (previously declared in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/Functions.php:7) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 21
+
+2022-08-25T03:16:28+00:00 CRITICAL Cannot redeclare medyplus_custom_style() (previously declared in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/Functions.php:7) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 21
+
+2022-08-25T03:16:41+00:00 CRITICAL Cannot redeclare medyplus_custom_style() (previously declared in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/Functions.php:7) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/functions.php on line 21
+
+2022-08-25T03:33:53+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:26
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(36): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 26
+
+2022-08-25T03:55:41+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T03:58:57+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_posted_on() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:25
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'post')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 25
+
+2022-08-25T04:03:30+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:26
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(36): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 26
+
+2022-08-25T04:03:47+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:26
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(36): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 26
+
+2022-08-25T04:04:51+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:26
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(36): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 26
+
+2022-08-25T04:04:54+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:26
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(36): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 26
+
+2022-08-25T04:05:00+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_posted_on() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:25
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'post')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 25
+
+2022-08-25T04:05:05+00:00 CRITICAL Uncaught Error: Call to undefined function twentytwenty_the_post_meta() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:58
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'post')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 58
+
+2022-08-25T04:07:01+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_posted_on() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:25
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'post')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 25
+
+2022-08-25T04:09:56+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:26
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(35): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 26
+
+2022-08-25T04:24:21+00:00 CRITICAL Uncaught Error: Call to a member function get_products_by_cat_name() on null in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php:35
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#3 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php on line 35
+
+2022-08-25T04:24:29+00:00 CRITICAL Uncaught Error: Call to a member function get_products_by_cat_name() on null in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php:31
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#3 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php on line 31
+
+2022-08-25T04:24:33+00:00 CRITICAL Uncaught Error: Call to a member function get_products_by_cat_name() on null in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php:31
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#3 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php on line 31
+
+2022-08-25T04:25:16+00:00 CRITICAL Cannot declare class WooCommerceCustom, because the name is already in use in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/WooCommerceCustom.php on line 2
+
+2022-08-25T04:26:13+00:00 CRITICAL Cannot declare class WooCommerceCustom, because the name is already in use in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/WooCommerceCustom.php on line 2
+
+2022-08-25T04:27:34+00:00 CRITICAL Cannot declare class WooCommerceCustom, because the name is already in use in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/WooCommerceCustom.php on line 2
+
+2022-08-25T04:28:17+00:00 CRITICAL Uncaught Error: Call to a member function wc_get_all_categories() on null in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php:18
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#3 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php on line 18
+
+2022-08-25T04:40:26+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T04:44:17+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on array in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php:58
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#3 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php on line 58
+
+2022-08-25T06:47:33+00:00 CRITICAL syntax error, unexpected '.', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php on line 63
+
+2022-08-25T06:51:34+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::ID() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/WooCommerceCustom.php:25
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(41): WooCommerceCustom->get_info_product('Jarrow Formulas...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#4 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/WooCommerceCustom.php on line 25
+
+2022-08-25T07:29:17+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T07:30:18+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T07:32:24+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T07:32:27+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T07:33:35+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T07:33:36+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T07:42:27+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WooCommerceCustom::get_info_product(), 1 passed in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php on line 42 and exactly 2 expected in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/WooCommerceCustom.php:9
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(42): WooCommerceCustom->get_info_product('Jarrow Formulas...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#4 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/WooCommerceCustom.php on line 9
+
+2022-08-25T07:42:38+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WooCommerceCustom::get_info_product(), 1 passed in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php on line 42 and exactly 2 expected in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/WooCommerceCustom.php:9
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(42): WooCommerceCustom->get_info_product('Jarrow Formulas...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#4 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/WooCommerceCustom.php on line 9
+
+2022-08-25T07:44:20+00:00 CRITICAL Uncaught Error: Call to undefined method WooCommerceCustom::get_products_by_cat_name() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php:33
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#3 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php on line 33
+
+2022-08-25T07:52:56+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T07:59:18+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:26
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(36): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 26
+
+2022-08-25T08:00:02+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_entry_footer() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:33
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(36): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 33
+
+2022-08-25T08:00:38+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-page.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/page.php(24): get_template_part('template-parts/...', 'page')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-page.php on line 17
+
+2022-08-25T08:01:49+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T08:03:35+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T08:10:44+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:26
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(36): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 26
+
+2022-08-25T08:11:35+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_post_thumbnail() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:32
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 32
+
+2022-08-25T08:11:51+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_entry_footer() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:61
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 61
+
+2022-08-25T08:52:07+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_id() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:15
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 15
+
+2022-08-25T08:56:47+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on string in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:10
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 10
+
+2022-08-25T08:57:31+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_id() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:10
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 10
+
+2022-08-25T08:58:25+00:00 CRITICAL Uncaught Error: Call to undefined function get_post_id() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:10
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'product')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 10
+
+2022-08-25T10:25:55+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_entry_footer() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php:33
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/search.php(36): get_template_part('template-parts/...', 'search')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content-search.php on line 33
+

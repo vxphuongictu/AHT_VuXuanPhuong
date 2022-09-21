@@ -1,0 +1,677 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YITH WooCommerce Order Tracking\n"
+"Report-Msgid-Bugs-To: YITH <plugins@yithemes.com>\n"
+"POT-Creation-Date: 2021-12-21 16:04:21+00:00\n"
+"PO-Revision-Date: 2016-06-13 16:57+0200\n"
+"Last-Translator: \n"
+"Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Poedit-KeywordsList: __ ;_e;_n:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: plugin-fw\n"
+
+#: init.php:51
+#, fuzzy
+msgid ""
+"YITH WooCommerce Product Gallery & Image Zoom is enabled but not effective. "
+"It requires WooCommerce in order to work."
+msgstr ""
+"YITH WooCommerce Zoom Magnifier está habilitado pero no es efectivo. "
+"Requiere WooCommerce para funcionar."
+
+#: init.php:67
+msgid ""
+"You can't activate the free version of YITH WooCommerce Product Gallery & "
+"Image Zoom while you are using the premium one."
+msgstr ""
+
+#: lib/class.yith-ywzm-plugin-fw-loader.php:136
+msgid "Main image options"
+msgstr ""
+
+#: lib/class.yith-ywzm-plugin-fw-loader.php:137
+#: plugin-options/gallery-options.php:19
+msgid "Product gallery options"
+msgstr ""
+
+#: lib/class.yith-ywzm-plugin-fw-loader.php:138
+msgid "Premium Version"
+msgstr "Versión Premium"
+
+#: lib/class.yith-ywzm-plugin-fw-loader.php:191
+#, fuzzy
+msgid ""
+"YITH WooCommerce Product Gallery & Image Zoom  is available in an "
+"outstanding PREMIUM version with many new options, discover it now."
+msgstr ""
+"YITH WooCommerce Zoom Magnifier está disponible en una espectacular versión "
+"PREMIUM con muchas nuevas opciones, descúbrela ahora."
+
+#: lib/class.yith-ywzm-plugin-fw-loader.php:192
+msgid "Premium version"
+msgstr "Versión Pemium"
+
+#: lib/class.yith-ywzm-plugin-fw-loader.php:200
+msgid "YITH WooCommerce Product Gallery & Image Zoom "
+msgstr ""
+
+#: lib/class.yith-ywzm-plugin-fw-loader.php:201
+#, fuzzy
+msgid ""
+"In YIT Plugins tab you can find  YITH WooCommerce Product Gallery & Image "
+"Zoom  options.<br> From this menu you can access all settings of the YITH "
+"plugins activated."
+msgstr ""
+"En la pestaña YITH Plugins puedes encontrar opciones de YITH WooCommerce "
+"Zoom Magnifier. <br> Desde este menú puedes acceder a todos los ajustes de "
+"los plugin YITH activados."
+
+#: lib/compatibility/elementor/class-yith-wczm-product-images-widget.php:37
+msgid "Zoom Product images"
+msgstr ""
+
+#: plugin-options/gallery-options.php:25
+msgid "Hide gallery thumbnails from single product page"
+msgstr ""
+
+#: plugin-options/gallery-options.php:26
+msgid ""
+"Enable to hide the product gallery thumbs from the single product details "
+"page."
+msgstr ""
+
+#: plugin-options/gallery-options.php:33
+#, fuzzy
+msgid "Enable Slider"
+msgstr "Activar Deslizador"
+
+#: plugin-options/gallery-options.php:34
+#, fuzzy
+msgid "Enable the thumbnails slider."
+msgstr "Activar miniatura de Deslizador."
+
+#: plugin-options/gallery-options.php:46
+#, fuzzy
+msgid "Thumbnails to show"
+msgstr "Número de elementos que se muestran"
+
+#: plugin-options/gallery-options.php:47
+msgid "Set how many thumbnails to show. You can show max 10 thumbnails."
+msgstr ""
+
+#: plugin-options/gallery-options.php:63
+msgid "Slider colors"
+msgstr ""
+
+#: plugin-options/gallery-options.php:70
+msgid "Background color"
+msgstr ""
+
+#: plugin-options/gallery-options.php:75
+msgid "Border color"
+msgstr ""
+
+#: plugin-options/gallery-options.php:80
+msgid "Arrow color"
+msgstr ""
+
+#: plugin-options/gallery-options.php:90
+msgid "Set colors of the slider elements."
+msgstr ""
+
+#: plugin-options/gallery-options.php:97
+msgid "Background color hover"
+msgstr ""
+
+#: plugin-options/gallery-options.php:102
+msgid "Border color hover"
+msgstr ""
+
+#: plugin-options/gallery-options.php:107
+msgid "Arrow color hover"
+msgstr ""
+
+#: plugin-options/gallery-options.php:118
+msgid "Slider sizes (px)"
+msgstr ""
+
+#: plugin-options/gallery-options.php:119
+msgid "Set the size of the slider elements."
+msgstr ""
+
+#: plugin-options/gallery-options.php:123
+msgid "Slider"
+msgstr ""
+
+#: plugin-options/gallery-options.php:124
+msgid "Arrow"
+msgstr ""
+
+#: plugin-options/gallery-options.php:125
+msgid "Border"
+msgstr ""
+
+#: plugin-options/gallery-options.php:144
+#, fuzzy
+msgid "Infinite slider"
+msgstr "Carrusel infinito"
+
+#: plugin-options/gallery-options.php:145
+msgid ""
+"Enable to set the slider as infinite. At the last thumbnail, the slider will "
+"start again from the 1st image."
+msgstr ""
+
+#: plugin-options/gallery-options.php:157
+msgid "Infinite slider type"
+msgstr ""
+
+#: plugin-options/gallery-options.php:158
+msgid "Choose the infinite slider type to apply."
+msgstr ""
+
+#: plugin-options/gallery-options.php:163
+msgid ""
+"Circular - the thumbnail after the last one will be the 1st of the list and "
+"the slider will start again."
+msgstr ""
+
+#: plugin-options/gallery-options.php:164
+msgid ""
+"Back to the 1st - after the last thumbnail the slider goes back and jumps to "
+"the 1st thumbnail."
+msgstr ""
+
+#: plugin-options/gallery-options.php:173
+#, fuzzy
+msgid "Autoplay slider"
+msgstr "Activar Deslizador"
+
+#: plugin-options/gallery-options.php:174
+msgid "Enable to set the slider in autoplay mode."
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:25
+msgid "Lightbox icon colors"
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:26
+msgid "Set the lightbox icon colors."
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:33
+msgid "Background"
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:38
+msgid "Icon"
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:44
+msgid "Lightbox icon size (px)"
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:45
+msgid "Set the lightbox icon size."
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:54
+msgid "Lightbox icon radius (%)"
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:55
+msgid "Set the border radius to change the shape of the lightbox background."
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:64
+msgid "Lightbox icon position"
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:65
+msgid "Choose in which position to show the lightbox icon."
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:73
+msgid "Top left"
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:74
+msgid "Top right"
+msgstr ""
+
+#: plugin-options/image/lightbox-options.php:75
+#, fuzzy
+msgid "Bottom left"
+msgstr "Abajo"
+
+#: plugin-options/image/lightbox-options.php:76
+#, fuzzy
+msgid "Bottom right"
+msgstr "Abajo"
+
+#: plugin-options/image/zoom-options.php:34
+#, fuzzy
+msgid "Hide zoom on mobile devices"
+msgstr "Activar en dispositivos móviles"
+
+#: plugin-options/image/zoom-options.php:35
+#, fuzzy
+msgid "Enable to hide the zoom on mobile devices"
+msgstr "Activar en dispositivos móviles"
+
+#: plugin-options/image/zoom-options.php:43
+#, fuzzy
+msgid "Zoom window position"
+msgstr "Posición del cuadro de zoom"
+
+#: plugin-options/image/zoom-options.php:44
+msgid "Choose on which position to open the zoom window."
+msgstr ""
+
+#: plugin-options/image/zoom-options.php:52
+#, fuzzy
+msgid "Right side"
+msgstr "Derecha"
+
+#: plugin-options/image/zoom-options.php:53
+msgid "Inside"
+msgstr "Dentro"
+
+#: plugin-options/image/zoom-options.php:58
+msgid "Zoom window sizes (px)"
+msgstr ""
+
+#: plugin-options/image/zoom-options.php:59
+msgid "Set the zoom window width and height."
+msgstr ""
+
+#: plugin-options/image/zoom-options.php:63
+msgid "Width"
+msgstr ""
+
+#: plugin-options/image/zoom-options.php:64
+#, fuzzy
+msgid "Height"
+msgstr "Derecha"
+
+#: plugin-options/image/zoom-options.php:83
+msgid "Loading label"
+msgstr "Etiqueta de cargando"
+
+#: plugin-options/image/zoom-options.php:84
+msgid "Choose the text to show when the zoom is loading."
+msgstr ""
+
+#: plugin-options/image/zoom-options.php:86
+#: plugin-options/image/zoom-options.php:87
+msgid "Loading..."
+msgstr "Cargando..."
+
+#: plugin-options/image/zoom-options.php:92
+#, fuzzy
+msgid "Lens border opacity"
+msgstr "Opacidad de la lente"
+
+#: plugin-options/image/zoom-options.php:93
+msgid "Set the opacity of the zoom lens border."
+msgstr ""
+
+#: plugin-options/image/zoom-options.php:106
+msgid "Blur main image"
+msgstr ""
+
+#: plugin-options/image/zoom-options.php:107
+msgid "Enable to blur the main image when zooming."
+msgstr ""
+
+#: templates/admin/premium.php:172 templates/admin/premium.php:242
+msgid ""
+"Upgrade to the %1$spremium version%2$s%3$sof %1$sYITH WooCommerce Product "
+"Gallery & Image Zoom%2$s to benefit from all features!"
+msgstr ""
+
+#: templates/admin/premium.php:174 templates/admin/premium.php:244
+msgid "Upgrade"
+msgstr ""
+
+#: templates/admin/premium.php:181
+#, fuzzy
+msgid "Premium Features"
+msgstr "Versión Premium"
+
+#: templates/admin/premium.php:186
+msgid "THE BIGGER THE IMAGE, THE MORE PERSUADED THE CLIENT"
+msgstr ""
+
+#: templates/admin/premium.php:188
+msgid ""
+"It is hard to get a sense of the real quality and the details of an online "
+"product when you look at it. Because of this, YITH WooCommerce Product "
+"Gallery & Image Zoom offers a great tool to perceive the quality of the "
+"products with great care."
+msgstr ""
+
+#: templates/admin/premium.php:203
+msgid ""
+"Use the exclusion list to disable the zoom option on specific products or "
+"categories"
+msgstr ""
+
+#: templates/admin/premium.php:205
+msgid ""
+"Do you want to disable the zoom option on some products or specific "
+"categories of your shop and keep it active only on selected products? The "
+"Exclusion List bundled in the plugin will grant you the highest flexibility."
+msgstr ""
+
+#: templates/admin/premium.php:214
+msgid "Change the main image on click or hover for gallery thumbnails"
+msgstr ""
+
+#: templates/admin/premium.php:216
+msgid ""
+"Since version 2.0, you will find an option to edit the main product image "
+"whenever you hover over one of the gallery thumbnails. This solution draws "
+"inspiration from Amazon and many other big e-commerce stores for better "
+"usability and to spare your customers any extra clicks."
+msgstr ""
+
+#: templates/admin/premium.php:231
+msgid "Show a zoom icon on main product image"
+msgstr ""
+
+#: templates/admin/premium.php:233
+msgid ""
+"Enable a glass icon to visually identify the zoom feature available for your "
+"images. You can customize colors, size and position of this icon."
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"<code><strong>YITH WooCommerce Product Gallery & Image Zoom</strong></code> "
+"allows you to add a zoom effect to product images and a thumbnail slider for "
+"the product image gallery. <a href=\"https://yithemes.com/\" target=\"_blank"
+"\">Get more plugins for your e-commerce shop on <strong>YITH</strong></a>."
+msgstr ""
+
+#: plugin-options/image-options.php:26
+#, fuzzy
+msgctxt "Admin title of tab"
+msgid "Zoom options"
+msgstr "Posición del cuadro de zoom"
+
+#: plugin-options/image-options.php:32
+#, fuzzy
+msgctxt "Admin title of tab"
+msgid "Lightbox"
+msgstr "Derecha"
+
+#~ msgid "Image Size"
+#~ msgstr "Tamaño de la imagen"
+
+#~ msgid "The size of the images used within the magnifier box"
+#~ msgstr "El tamaño de las imágenes usadas dentro de la caja de zoom"
+
+#~ msgid "Do you want to hard crop the image?"
+#~ msgstr "¿Quieres recortar la imagen?"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Image size"
+#~ msgstr "Tamaño de imagen"
+
+#~ msgid "General Settings"
+#~ msgstr "Ajustes Generales"
+
+#~ msgid "Activate YITH WooCommerce Zoom Magnifier"
+#~ msgstr "Activar YITH WooCommerce Zoom Magnifier"
+
+#~ msgid "Activate the plugin or use the WooCommerce default product image."
+#~ msgstr ""
+#~ "Activar el plugin o usar la imagen de producto por defecto de WooComerce."
+
+#~ msgid ""
+#~ "Set if zoom and slider functionalities should be shown also on mobile "
+#~ "devices."
+#~ msgstr ""
+#~ "Establecer si las funcionalidades del zoom y el deslizador deberían "
+#~ "mostrarse también en dispositivos móviles."
+
+#~ msgid "Forced Image Size"
+#~ msgstr "Tamaño de imagen obligatiorio"
+
+#~ msgid ""
+#~ "If disabled, you will able to customize the sizes of the zoomed images. "
+#~ "Disable it at your own risk; the magnifier could not properly work with "
+#~ "images out of proportion."
+#~ msgstr ""
+#~ "Si está deshabilitado, podrás personalizar los tamaños de las imágenes "
+#~ "aumentadas. Desactívalo bajo tu propio riesgo, la lupa no funciona "
+#~ "correctamente con imágenes desproporcionadas."
+
+#~ msgid "Magnifier Settings"
+#~ msgstr "Ajustes del xoom"
+
+#~ msgid "Zoom Box Width"
+#~ msgstr "Ancho del cuadro de zoom"
+
+#~ msgid "The width of the magnifier box (default: auto)"
+#~ msgstr "El ancho del cuadro de zoom (por defecto: auto)"
+
+#~ msgid "Zoom Box Height"
+#~ msgstr "Altura del cuadro de zoom"
+
+#~ msgid "The height of the magnifier box (default: auto)"
+#~ msgstr "La altura del cuadro de zoom (por defecto: auto)"
+
+#~ msgid "The magnifier position"
+#~ msgstr "La posición del cuadro de zoom"
+
+#~ msgid "Zoom Box Position for mobile devices"
+#~ msgstr "Posición del cuadro de zoom en dispositivos móviles"
+
+#~ msgid ""
+#~ "The magnifier position for the mobile devices (iPhone, Android, etc.)"
+#~ msgstr ""
+#~ "La posición del zoom en dispositivos móviles (iPhone, Android, etc.)"
+
+#~ msgid "Default"
+#~ msgstr "Por defecto"
+
+#~ msgid "Disable"
+#~ msgstr "Deshabilitar"
+
+#~ msgid "Blur"
+#~ msgstr "Difuminar"
+
+#~ msgid "Add a blur effect to the small image on mouse hover."
+#~ msgstr ""
+#~ "Añadir un efecto de disolverse a la imagen pequeña con el evento hover "
+#~ "del ratón."
+
+#~ msgid "Slider Settings"
+#~ msgstr "Ajustes de Deslizador"
+
+#~ msgid "Activate Responsive Slider"
+#~ msgstr "Activar Deslizador Responsive"
+
+#~ msgid ""
+#~ "This option fits the thumbnails within the available space. Disable it if "
+#~ "you want to manage freely the thumbnails (eg. add margins, paddings, etc.)"
+#~ msgstr ""
+#~ "Esta opción ajusta las miniaturas dentro del espacio disponible. "
+#~ "Deshabilítala si quieres administrar libremente las miniaturas (p.ej.: "
+#~ "añadir márgenes, rellenos, etc.)"
+
+#~ msgid "Items"
+#~ msgstr "Elementos"
+
+#~ msgid "Circular carousel"
+#~ msgstr "Carrusel circular"
+
+#~ msgid "It defines whether the carousel should be circular."
+#~ msgstr "Define si el carrusel debe ser circular"
+
+#~ msgid ""
+#~ "It defines whether the carousel should be infinite. Note: It is possible "
+#~ "to create a non-circular, infinite carousel, but it is not possible to "
+#~ "create a circular, non-infinite carousel."
+#~ msgstr ""
+#~ "Define si el carrusel debe ser infinito. Nota: es posible crear un "
+#~ "carrusel infinito no circular, pero no es posible crear un carrusel "
+#~ "circular no infinito."
+
+#~ msgid "Settings"
+#~ msgstr "Ajustes"
+
+#~ msgid "Plugin Documentation"
+#~ msgstr "Documentación del Plugin"
+
+#~ msgid "YITH WooCommerce Zoom Magnifier"
+#~ msgstr "YITH WooCommerce Zoom Magnifier"
+
+#~ msgid "Upgrade to the PREMIUM VERSION"
+#~ msgstr "Actualiza a la VERSIÓN PREMIUM"
+
+#~ msgid "Discover The Advanced Features"
+#~ msgstr "Descubre las características avanzadas"
+
+#~ msgid ""
+#~ "Upgrade to the PREMIUM VERSION of YITH WOOCOMMERCE ZOOM MAGNIFIER to "
+#~ "benefit from all features!"
+#~ msgstr ""
+#~ "¡Actualiza a la VERSIÓN PREMIUM de YITH WOOCOMMERCE ZOOM MAGNIFIER para "
+#~ "beneficiarte de todas las características!"
+
+#~ msgid ""
+#~ "See YITH WooCommerce Zoom Magnifier plugin with full premium features in "
+#~ "action"
+#~ msgstr ""
+#~ "Ver cómo es el plugin YITH WooCommerce Zoom Magnifier con todas sus "
+#~ "características premium en acción"
+
+#~ msgid "Get Support and Pro Features"
+#~ msgstr "Hazte con Características Pro y Soporte"
+
+#~ msgid ""
+#~ "Purchasing the premium version of the plugin, you will take advantage of "
+#~ "the advanced features of the product, and you will get one year of free "
+#~ "updates and support through our platform available 24h/24."
+#~ msgstr ""
+#~ "Comprando la versión premium del plugin, obtendrás las ventajas de las "
+#~ "características avanzadas del producto, y tendrás un año de "
+#~ "actualizaciones gratuitas y de soporte a través de nuestra plataforma "
+#~ "disponible 24h/24."
+
+#~ msgid "Select a date"
+#~ msgstr "Selecciona una fecha"
+
+#~ msgid "Hours"
+#~ msgstr "Horas"
+
+#~ msgid "Minutes"
+#~ msgstr "Minutos"
+
+#~ msgid "Upload"
+#~ msgstr "Actualizar"
+
+#~ msgid "px"
+#~ msgstr "px"
+
+#~ msgid "em"
+#~ msgstr "em"
+
+#~ msgid "pt"
+#~ msgstr "pt"
+
+#~ msgid "rem"
+#~ msgstr "rem"
+
+#~ msgid "Select a font family"
+#~ msgstr "Selecciona un tipo de fuente"
+
+#~ msgid "Regular"
+#~ msgstr "Normal"
+
+#~ msgid "Bold"
+#~ msgstr "Negrita"
+
+#~ msgid "Extra bold"
+#~ msgstr "Extra negrita"
+
+#~ msgid "Italic"
+#~ msgstr "Cursiva"
+
+#~ msgid "Italic bold"
+#~ msgstr "Negrita cursiva"
+
+#~ msgid "Click to preview"
+#~ msgstr "Haz click para previsualizar"
+
+#~ msgid "product"
+#~ msgstr "praducto"
+
+#~ msgid "products"
+#~ msgstr "productos"
+
+#~ msgid "Remove from exclusions"
+#~ msgstr "Quitar de las exclusiones"
+
+#~ msgid "Edit product"
+#~ msgstr "Editar producto"
+
+#~ msgid "Remove from list"
+#~ msgstr "Eliminar de la lista"
+
+#~ msgid "%s product removed successfully"
+#~ msgid_plural "%s products removed successfully"
+#~ msgstr[0] "El producto %s ha sido eliminado con éxito"
+#~ msgstr[1] "Los productos %s han sido eliminados con éxito"
+
+#~ msgid "%s product added successfully"
+#~ msgid_plural "%s products added successfully"
+#~ msgstr[0] "El producto %s ha sido añadido con éxito"
+#~ msgstr[1] "Los productos %s han sido añadidos con éxito"
+
+#~ msgid "Product updated successfully"
+#~ msgstr "Producto actualizado con éxito"
+
+#~ msgid "Single Product Exclusion List"
+#~ msgstr "Lista de Exclusión de Productos"
+
+#~ msgid "Add Products"
+#~ msgstr "Añadir productos"
+
+#~ msgid "Products to exclude"
+#~ msgstr "Productos para excluir"
+
+#~ msgid "Add product exclusion"
+#~ msgstr "Añadir exclusión de producto"
+
+#~ msgid "Return to exclusion list"
+#~ msgstr "Devolver a la lista de exclusión"
+
+#~ msgid "Select at least one product"
+#~ msgstr "Selecciona al menos un producto"
+
+#~ msgid "Exclude product categories"
+#~ msgstr "Excluir categorías de productos"
+
+#~ msgid "Top"
+#~ msgstr "Arriba"
+
+#~ msgid "Left"
+#~ msgstr "Izquierda"
+
+#~ msgid "Product"
+#~ msgstr "Producto"

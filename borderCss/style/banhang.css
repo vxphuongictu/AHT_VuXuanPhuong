@@ -1,0 +1,220 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+
+.container {
+	align-items: center;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.main-body {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	width: 90%;
+	height: 90%;
+	max-width: 90%;
+	max-height: 90%;
+	background-color: #FAFAFA;
+	border-radius: 10px;
+	border: 2px solid orange;
+	overflow: hidden;
+}
+
+.container .main-body .grid-panel {
+	margin: 0 auto;
+	width: 95%;
+	height: 90%;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 100% 100%;
+	grid-column-gap: 20px;
+	grid-template-areas:
+	"list-food list-price";
+}
+
+.container .main-body .grid-panel .list-food {
+	grid-area: list-food;
+	border: 1px solid blue;
+}
+
+.container .main-body .grid-panel .list-price {
+	grid-area: list-price;
+	background-color: #FAFAFA;
+	border: 1px solid blue;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 70% 30%;
+	grid-template-areas:
+	"food-info"
+	"total-price";
+}
+
+.container .main-body .grid-panel .list-food .table-action {
+	width: 100%;
+	height: 85%;
+	padding: 20px;
+	overflow: scroll;
+}
+
+.container .main-body .grid-panel .list-food .table-action .body-table input:first-child, 
+.container .main-body .grid-panel .list-food .table-action .body-table input:last-child {
+	background-color: blue;
+	width: 30px;
+	height: 30px;
+	color: white;
+	border-radius: 10px;
+	border: 1px solid white;
+}
+
+.container .main-body .grid-panel .list-food .table-action .body-table input:nth-child(2) {
+	width: 50px;
+	margin: 0 5px;
+	text-align: center;
+}
+
+.container .main-body .grid-panel .list-food .table-action .body-table input[type=number]::-webkit-inner-spin-button,
+.container .main-body .grid-panel .list-food .table-action .body-table input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.container .main-body .grid-panel .list-food .table-action .body-table tr:hover{
+	height: 55px;
+	background-color: grey;
+}
+
+.container .main-body .grid-panel .list-food .table-action .main-action{
+	width: 100%;
+}
+
+.container .main-body .grid-panel .list-food .food-action {
+	margin: 0 auto;
+	padding: 20px;
+	width: 95%;
+	height: 10%;
+	border: 1px solid blue;
+}
+
+.container .main-body .grid-panel .list-food .input-action {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-template-areas:
+	"input1 input2 input3";
+}
+
+.container .main-body .grid-panel .list-food .input-action input:first-child{
+	grid-area: input1;
+}
+
+.container .main-body .grid-panel .list-food .input-action input:first-child:hover{
+	grid-area: input1;
+	height: 35px;
+	background-color: #FAFAFA;
+	border-style: solid;
+	border-width: 2px;
+	border-image: linear-gradient(to right, red, yellow, orange) 1;
+}
+
+.container .main-body .grid-panel .list-food .input-action input:nth-child(2) {
+	grid-area: input2;
+}
+
+.container .main-body .grid-panel .list-food .input-action input:nth-child(2):hover {
+	grid-area: input2;
+	height: 35px;
+	background-color: #FAFAFA;
+	border-style: solid;
+	border-width: 2px;
+	border-image: linear-gradient(to right, red, yellow, orange) 1;
+}
+
+.container .main-body .grid-panel .list-food .input-action input:last-child {
+	grid-area: input3;
+}
+
+.container .main-body .grid-panel .list-food .input-action input:last-child:hover{
+	border: 0;
+	background-image: linear-gradient(to bottom, red, orange, yellow) ;
+}
+
+.container .main-body .grid-panel .list-price .food-info {
+	grid-area: food-info;
+	background-color: white;
+	display: flex;
+	align-items: center;
+}
+
+.container .main-body .grid-panel .list-price .food-info .main-food {
+	margin: 0 auto;
+	border: 1px solid #DFE2E6;
+	width: 95%;
+	height: 95%;
+	overflow: scroll;
+}
+
+.container .main-body .grid-panel .list-price .food-info .main-food h5{
+	text-align: center;
+	margin-top: 15px;
+	text-decoration-line: underline;
+}
+
+.container .main-body .grid-panel .list-price .food-info .main-food .show-list-item .item{
+	margin: 0 auto;
+	width: 95%;
+	height: 90%;
+	display: flex;
+	padding-left: 5px;
+}
+
+.container .main-body .grid-panel .list-price .food-info .main-food .show-list-item .item .item-stt {
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+.container .main-body .grid-panel .list-price .food-info .main-food .show-list-item .item .style-list{
+	margin: 0 3px;
+}
+
+.container .main-body .grid-panel .list-price .total-price {
+	grid-area: total-price;
+}
+
+.container .main-body .grid-panel .list-price .total-price .main-total-price {
+	width: 95%;
+	height: 90%;
+	display: grid;
+	border: 1px solid #DFE2E6;
+	margin: 0 auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 20% 20% 20% 20%;
+	grid-template-areas:
+	"title"
+	"result";
+}
+
+.container .main-body .grid-panel .list-price .total-price .main-total-price h5{
+	margin-top: 15px;
+	width: 100%;
+	text-align: center;
+	grid-area: title;
+	grid-column: 1/ span 6;
+}
+
+.container .main-body .grid-panel .list-price .total-price .result-total {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	grid-area: result;
+	grid-row: 4/ span 1;
+	grid-column: 1/ span 4;
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="https://use.fontawesome.com/8f7cc3041a.js"></script>
+	<script src="./js/main.js"></script>
+	<title>Myleague.vn</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="main-body">
+			<div class="choose-partner">
+				<div class="title-choose-partner">
+					<label>Chọn cầu thủ</label>
+				</div>
+				<div class="cau-thu">
+					<div class="title-cau-thu">
+						<span class="so-ao">Số áo: <span class="red-important">*</span></span>
+						<span class="ten-ao">Tên trên áo: <span class="red-important">*</span></span>
+					</div>
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="1">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ A" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1" selected>Thủ môn</option>
+							<option value="2">Hậu vệ</option>
+							<option value="3">Tiền vệ</option>
+							<option value="4">Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="2">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ B" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2" selected>Hậu vệ</option>
+							<option value="3">Tiền vệ</option>
+							<option value="4">Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="3">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ C" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2" selected>Hậu vệ</option>
+							<option value="3">Tiền vệ</option>
+							<option value="4">Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="4">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ D" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2" selected>Hậu vệ</option>
+							<option value="3">Tiền vệ</option>
+							<option value="4">Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="5">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ E" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2" selected>Hậu vệ</option>
+							<option value="3">Tiền vệ</option>
+							<option value="4">Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="6">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ F" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2">Hậu vệ</option>
+							<option value="3" selected>Tiền vệ</option>
+							<option value="4">Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="7">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ G" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2">Hậu vệ</option>
+							<option value="3" selected>Tiền vệ</option>
+							<option value="4">Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="8">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ H" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2">Hậu vệ</option>
+							<option value="3" selected>Tiền vệ</option>
+							<option value="4">Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="9">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ I" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2">Hậu vệ</option>
+							<option value="3" selected>Tiền vệ</option>
+							<option value="4">Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="10">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ J" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2">Hậu vệ</option>
+							<option value="3">Tiền vệ</option>
+							<option value="4" selected>Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+
+					<div class="option-group">
+						<label class="checkbox">
+							<input type="checkbox" name="" checked>
+						</label>
+						<input type="number" name="so-ao" value="11">
+						<input type="text" name="ten-tren-ao" value="Cầu thủ K" onchange="setSoLuongNguoi();">
+						<select class="vi-tri">
+							<option value="0">Vị trí thi đấu</option>
+							<option value="1">Thủ môn</option>
+							<option value="2">Hậu vệ</option>
+							<option value="3">Tiền vệ</option>
+							<option value="4" selected>Tiền đạo</option>
+							<option value="5">Khác</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="setting-up">
+				<div class="form-group">
+					<label for="ten-doi">
+						<span>Tên đội thi đấu </span>
+						<span class="red-important">*</span>
+					</label>
+					<div class="input">
+						<input type="text" class="ten-doi">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="ten-doi-hinh">
+						<span>Tên đội hình </span>
+						<span class="red-important">*</span>
+					</label>
+					<div class="input">
+						<input type="text" class="ten-doi-hinh">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="so-luong-nguoi">
+						<span>Số lượng người </span>
+						<span class="red-important">*</span>
+					</label>
+					<div class="input">
+						<select class="so-luong-nguoi" onchange="setSoLuongNguoi();">
+							<option value="3">3</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11" selected>11</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="so-do">
+						<span>Sơ đồ thi đấu </span>
+						<span class="red-important">*</span>
+					</label>
+					<div class="input">
+						<select class="so-do">
+							<option value="343">3-4-3</option>
+							<option value="352">3-5-2</option>
+							<option value="3511">3-5-1-1</option>
+							<option value="3142">3-1-4-2</option>
+							<option value="424">4-2-4</option>
+							<option value="442">4-4-2</option>
+							<option value="442D" selected=>4-4-2 D</option>
+							<option value="433">4-3-3</option>
+							<option value="4231">4-2-3-1</option>
+							<option value="41212">4-1-2-1-2</option>
+							<option value="4411">4-4-1-1</option>
+							<option value="541">5-4-1</option>
+							<option value="532">5-3-2</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="che-do">
+						<span>Chế độ </span>
+						<span class="red-important">*</span>
+					</label>
+					<div class="input">
+						<select class="che-do">
+							<option value="1">Công khai</option>
+							<option value="2">Nội bộ</option>
+							<option value="3">Riêng tư</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="nen-san-dau">
+						<span>Nền sân đấu </span>
+						<span class="red-important">*</span>
+					</label>
+					<div class="input">
+						<div class="nen-san-dau">
+							<span id="select">Sân 1</span>
+						</div>
+
+						<div class="option-nen-san-dau">
+							<div class="option" id="san1">
+								<div class="box-color-san-1"></div>
+								<span>Sân 1</span>
+							</div>
+
+							<div class="line"></div>
+
+							<div class="option" id="san2">
+								<div class="box-color-san-2"></div>
+								<span>Sân 2</span>
+							</div>
+							<div class="line"></div>
+
+							<div class="option" id="san3">
+								<div class="box-color-san-3"></div>
+								<span>Sân 3</span>
+							</div>
+							<div class="line"></div>
+
+							<div class="option" id="san4">
+								<div class="box-color-san-4"></div>
+								<span>Sân 4</span>
+							</div>
+							<div class="line"></div>
+
+							<div class="option" id="san5">
+								<div class="box-color-san-5"></div>
+								<span>Sân 5</span>
+							</div>
+
+							<div class="line"></div>
+
+							<div class="option" id="san6">
+								<div class="box-color-san-6"></div>
+								<span>Sân 6</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="anh-mac-dinh">
+						<span>Ảnh người chơi </span>
+						<span class="red-important">*</span>
+					</label>
+					<div class="input">
+						<div class="anh-mac-dinh">
+							<span id="select">Mặc định</span>
+						</div>
+
+						<div class="option-anh-mac-dinh">
+							<div class="option" id="ao1">
+								<div class="box-color-ao-1"></div>
+								<span>Áo đấu 1</span>
+							</div>
+
+							<div class="line"></div>
+
+							<div class="option" id="ao2">
+								<div class="box-color-ao-2"></div>
+								<span>Áo đấu 2</span>
+							</div>
+
+							<div class="line"></div>
+
+							<div class="option" id="ao3">
+								<div class="box-color-ao-3"></div>
+								<span>Áo đấu 3</span>
+							</div>
+
+							<div class="line"></div>
+
+							<div class="option" id="ao4">
+								<div class="box-color-ao-4"></div>
+								<span>Áo đấu 4</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input">
+						<button class="create">Tạo mới</button>
+						<button class="download"><i class="fa fa-download"></i>Tải về</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="ground">
+				<div class="ground-img"></div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

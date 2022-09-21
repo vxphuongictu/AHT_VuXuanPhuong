@@ -1,0 +1,73 @@
+2022-08-26T02:07:45+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on string in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/single-product.php:22
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#3 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/single-product.php on line 22
+
+2022-08-26T02:29:36+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_content() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php:39
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/X...', false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#6 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php on line 39
+
+2022-08-26T02:29:52+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::the_content() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php:28
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/X...', false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#6 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php on line 28
+
+2022-08-26T02:52:22+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::description() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php:38
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/X...', false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#6 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php on line 38
+
+2022-08-26T02:53:43+00:00 CRITICAL Uncaught Error: Call to undefined function get_ecommerce_excerpt() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php:38
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/X...', false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#6 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php on line 38
+
+2022-08-26T02:54:25+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::post_excerpt() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php:38
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/X...', false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#6 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/content-single-product.php on line 38
+
+2022-08-26T04:35:04+00:00 CRITICAL Uncaught Error: Call to undefined function get_regular_price() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/global/quantity-input.php:47
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1814): wc_get_template('global/quantity...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/single-product/add-to-cart/simple.php(42): woocommerce_quantity_input(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1696): wc_get_template('single-product/...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/class-wp-hook.php(307): woocommerce_simple_add_to_cart('')
+# in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/woocommerce/global/quantity-input.php on line 47
+

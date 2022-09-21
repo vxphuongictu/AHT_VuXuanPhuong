@@ -1,0 +1,122 @@
+{% extends 'base_login_page.html' %}
+{% load static %}
+
+{% block title %} AutoX - Login {% endblock title %}
+
+{% block content %}
+<section class="login-page">
+
+    <div style='background-image: url("{% static 'images/submit-a-car-1.png' %}")' class="background-image-login-page">
+        <div class="login-form">
+            <div class="login-form-group">
+                <div class="login-title">
+                    <h1>Login</h1>
+                </div>
+
+                <div class="login-content">
+                    <p>Login and start bidding car from all over Vietnam!</p>
+                </div>
+
+                <div class="wp-login-form">
+                    <div name="login-form" id="login-form">
+                        <p class="login-username">
+                            <label for="user_login"></label>
+                                <input type="text" name="user_login" id="user_login" autocomplete="username" class="input" value="" size="20" placeholder="Phone number">
+                        </p>
+
+                        <p class="login-password">
+                            <label for="user_pass"></label>
+                            <input type="password" name="user_pass" id="user_pass" autocomplete="current-password" class="input" value="" size="20" placeholder="Password">
+                        </p>
+
+                        <div class="option-form">
+                            <p class="login-remember">
+                                <label>
+                                    <input name="rememberme" type="checkbox" id="rememberme" value="forever">
+                                    Remember me?
+                                </label>
+                            </p>
+
+                            <p class="login-lost-password">
+                                <a name="lostpassword" id="lostpassword" href="https://google.com" class="lostpassword" target="_blank">Forgot password?</a>
+                            </p>
+                        </div>
+
+                        <input type="hidden" id="csrf_token" value="{{ csrf_token }}">
+
+                        <p class="login-submit">
+                            <input type="submit" name="wp-submit-login" id="wp-submit-login" class="button button-primary" value="Login">
+                        </p>
+
+                        <p class="regsiter-submit">
+                            <input type="button" name="register-submit-login-page" id="register-submit-login-page" class="button button-primary" value="New to AutoX? Register now!" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-form-group">
+                <div class="register-title">
+                    <h1>Register</h1>
+                </div>
+
+                <div class="register-content">
+                    <p>Register and start bidding car from all over Vietnam!</p>
+                </div>
+
+                <div class="wp-register-form">
+                    <div name="register-form" id="register-form" >
+                        <p class="register-fullname">
+                            <label for="fullname_register"></label>
+                            <input type="text" name="fullname" id="fullname_register" autocomplete="fullname" class="input" value="" size="20" placeholder="Full name">
+                        </p>
+
+                        <p class="register-username">
+                            <label for="user_register"></label>
+                            <input type="text" name="user_register" id="user_register" autocomplete="username" class="input" value="" size="20" placeholder="Phone number">
+                        </p>
+
+                        <p class="register-email">
+                            <label for="email_register"></label>
+                            <input type="text" name="email_register" id="email_register" autocomplete="email" class="input" value="" size="20" placeholder="Email">
+                        </p>
+
+                        <p class="register-password">
+                            <label for="new_pass"></label>
+                            <input type="password" name="new_pass" id="new_pass" autocomplete="new-password" class="input" value="" size="20" placeholder="Password">
+                        </p>
+
+                        <p class="register-confirm-password">
+                            <label for="user_confirm_pass"></label>
+                            <input type="password" name="user_confirm_pass" id="user_confirm_pass" autocomplete="confirm-password" class="input" value="" size="20" placeholder="Confirm password">
+                        </p>
+
+                        <div class="option-form">
+                            <p class="register-agree">
+                                <label>
+                                    <input name="agree" type="checkbox" id="agree" value="checked">
+                                    I agree with the term & conditions
+                                </label>
+                            </p>
+                        </div>
+
+                        <input type="hidden" id="csrf_token_register" value="{{ csrf_token }}">
+
+                        <p class="register-submit">
+                            <input type="submit" name="wp-submit-register" id="wp-submit-register" class="button button-primary" value="Register">
+                        </p>
+
+                        <p class="login-submit">
+                            <input type="button" name="login-submit-register-page" id="login-submit-register-page" class="button button-primary" value="Have a account? Login Now!" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="login-logo" href="/">
+                <img src="{% static 'images/oneshift-by-carousell-logo-1.png' %}" alt="login-logo">
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock content %}

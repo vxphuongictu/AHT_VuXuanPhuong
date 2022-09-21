@@ -1,0 +1,4 @@
+html:not(.dgwt-wcas-overlay-mobile-on) .dgwt-wcas-search-wrapp.dgwt-wcas-layout-icon .dgwt-wcas-search-form {
+	min-width: 200px;
+	left: -50px;
+}

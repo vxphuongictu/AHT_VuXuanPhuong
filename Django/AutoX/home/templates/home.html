@@ -1,0 +1,81 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+{% block title %} AutoX - Welcome {% endblock title %}
+
+{% block content %}
+<article id="main-body" class="container-fluid">
+	<div class="bg-body"></div>
+	<div class="logo-header-none-user">
+		<section class="logo">
+			<img src="{% static 'images/image-1.svg' %}" alt="banner-image-none-user">
+		</section>
+
+		<section class="text-in-slide-for-none-user">
+			<div class="text-header">
+				<font style="color: #fff; font-weight: 400">THE FASTEST WAY TO</font>
+				<font style="color: #ffbe00; font-weight: 600">YOUR NEXT CAR</font>
+			</div>
+
+			<div class="text-conent">
+				<font style="color: #fff; font-weight: 500">Choose from thousands of New Cars and Used Cars in Vietnam.</font>
+			</div>
+
+			<div class="explore-button">
+				<a href="https://facebook.com">
+					<button type="submit" class="btn-explore">
+						<font style="color: #000; font-weight: 600">Explore</font>
+					</button>
+				</a>
+			</div>
+		</section>
+	</div>
+
+	<div class="body-content container">
+		<section class="title-header">
+			<div class="title-group">
+				<font style="color: #333; font-weight: 600">Latest</font>&nbsp;
+				<font style="color: #ffbe00; font-weight: 600">Car Auction</font>
+			</div>
+		</section>
+
+		<section id="list-item" class="flex-wrap"></section>
+	</div>
+
+	<div class="footer-support container-fluid">
+		<div class="container">
+			<section class="vehicle-form">
+				<div class="title">Have a vehicle to sell?</div>
+				<div class="content">Have a car and wonder how much should it be? Submit your vehicle information to AutoX and we will evaluate, appraise and auction your vehicle!</div>
+				<div class="form-group">
+					<div class="input-group-1">
+						<div class="box">
+							<input class="full-name" id="full-name" placeholder="Full name"></input>
+						</div>
+						<div class="box">
+							<input class="phone-number" id="phone-number" placeholder="Phone number"></input>
+						</div>
+					</div>
+
+					<div class="input-group-2">
+						<div class="box">
+							<input class="email" id="email" placeholder="Email"></input>
+						</div>
+						<div class="box">
+							<textarea class="details" id="details" rows="7" placeholder="Details about your car: Model, Register year,.."></textarea>
+						</div>
+					</div>
+
+					<div class="btn">
+						<button class="btn-submit" id="guest_send_mail" onclick="guest_send_mail();">Submit</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="background-image">
+				<img src="{% static 'images/submit-a-car-1-1-e1662286796538.png' %}" class="background">
+			</section>
+		</div>
+	</div>
+</article>
+{% endblock content %}

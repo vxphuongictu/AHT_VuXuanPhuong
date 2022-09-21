@@ -1,0 +1,12 @@
+2022-08-22T10:03:26+00:00 CRITICAL Uncaught Error: Call to undefined function medyplus_posted_on() in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php:25
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(772): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template.php(716): load_template('/Applications/X...', false, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/single.php(19): get_template_part('template-parts/...', 'post')
+#4 /Applications/XAMPP/xamppfiles/htdocs/wp-includes/template-loader.php(106): include('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/wp-blog-header.php(19): require_once('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/index.php(17): require('/Applications/X...')
+#7 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/wp-content/themes/medyplus/template-parts/content.php on line 25
+

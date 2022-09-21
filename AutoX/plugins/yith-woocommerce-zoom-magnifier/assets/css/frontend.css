@@ -1,0 +1,117 @@
+/* gallery */
+.yith_magnifier_gallery {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.yith_magnifier_gallery li {
+  position: relative;
+  display: inline-block;
+  vertical-align: center;
+  top: 0;
+}
+
+/* .yith_magnifier_gallery li.last {
+	margin-right: 0;
+} */
+
+.yith_magnifier_gallery li a {
+  width: 100% !important;
+  display: block;
+  margin-top: 10px;
+  height: auto !important;
+  overflow: hidden;
+}
+
+/* next/prev */
+.single-product.woocommerce .thumbnails {
+  position: relative;
+  overflow: hidden;
+}
+
+.yith_slider_arrow span{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.single-product.woocommerce .thumbnails #slider-prev,
+.single-product.woocommerce .thumbnails #slider-next {
+  display: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50% );
+}
+
+.single-product.woocommerce .thumbnails #slider-prev {
+  background-position: left center;
+  left: 1px;
+}
+
+.single-product.woocommerce .thumbnails #slider-next {
+  background-position: right center;
+  right: 0px;
+}
+
+.single-product.woocommerce .thumbnails:hover #slider-prev,
+.single-product.woocommerce .thumbnails:hover #slider-next {
+  display: block !important;
+}
+
+span.onsale {
+  z-index: 10000
+}
+
+div.pp_woocommerce a.yith_expand {
+  /*background: url("../icons/lightbox.svg") no-repeat center center;*/
+  display: inline;
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  text-decoration: none;
+  text-indent: -10000px;
+  z-index: 20000;
+  height: 25px;
+  width: 25px;
+  line-height: 1em;
+}
+
+.expand-button-hidden svg{
+  display: block;
+  padding: 2px;
+}
+
+
+div.pp_woocommerce span.yith_zoom_icon {
+  /*background: url("../icons/zoom.svg") no-repeat center center;*/
+  display: inline;
+  cursor: default;
+  font-size: 25px;
+  position: absolute;
+  text-decoration: none;
+  text-indent: -10000px;
+  z-index: 20000;
+  height: 25px;
+  width: 25px;
+  line-height: 1em;
+}
+
+.zoom-button-hidden svg{
+  display: block;
+  padding: 5px;
+}
+
+.expand-button-hidden svg {
+  display: block;
+  padding: 5px;
+}
+
+
+.elementor-widget-wrap .yith_magnifier_zoom.woocommerce-main-image img{
+  width: 100%;
+}

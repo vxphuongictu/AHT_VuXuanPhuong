@@ -1,0 +1,265 @@
+.image-product {
+	width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F5F5F5;
+    border-radius: 10px;
+    margin-right: 5%;
+}
+
+.image-product img {
+	width: 30%;
+	padding: 30px;
+}
+
+.rewview-prodcut {
+	display: flex;
+	flex-direction: row;
+	height: 400px;
+
+}
+
+.description {
+	height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.add-to-cart {
+	margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-add-to-cart input {
+	height: 40px;
+    width: 30%;
+    appearance: none;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.content-product .header {
+	display: flex;
+	width: 100%;
+}
+
+.content-product .header .header-left,
+.content-product .header .header-right {
+	width: 50%;
+}
+
+.content-product .header .header-right {
+	margin-left: 5%;
+}
+
+.description-product {
+	width: 50%;
+}
+
+.add-to-cart .form-add-to-cart .cart{
+	display: flex;
+	justify-content: center;
+}
+
+.add-to-cart .form-add-to-cart button {
+	height: 40px;
+    background-color: #f5e1f8;
+    border: 0;
+}
+
+.add-to-cart .form-add-to-cart button span {
+	padding: 0 10px;
+}
+
+.nav-links {
+	display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.comments-area {
+	width: 80%;
+	padding: 50px 0;
+	margin: 0 auto;
+}
+
+.comment-reply-title {
+	background-color: wheat;
+}
+
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #6c6cd3;
+}
+
+.nav-links a:hover {
+	color: #0ca8c9;
+}
+
+.content-product .header .header-right h2{
+	text-align: center;
+}
+
+.content-area {
+	margin-bottom: 2%;
+}
+
+.product-status .status-content label {
+	font-weight: 900;
+	color: black;
+}
+
+.product-status .status-content span {
+	color: #8f8f8f;
+}
+.product-status {
+	display: flex;
+}
+
+.status-content {
+	width: 50%;
+}
+
+.product-price {
+	width: 50%;
+	position: relative;
+}
+
+.container-price {
+	position: absolute;
+	right: 0;
+}
+.site-main {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+.description-table {
+	padding-top: 50px;
+}
+
+/*.description-table h2,
+.other-products h2,
+.products h2,
+.site-main > h2 {
+    background-color: aliceblue;
+}
+*/
+.description-content {
+	margin: 20px 50px;
+}
+
+.site-main > h2 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+	margin: 0 10px;
+	margin-bottom: 10px;
+}
+
+.woocommerce .products ul, .woocommerce ul.products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content-product {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+.img-product {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #F5F5F5;
+    height: 70%;
+}
+
+.container-bottom-product .info-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.total-product-price {
+	text-align: center;
+}
+
+.add-to-cart span {
+	padding: 20px;
+}
+
+.name-item a {
+	color: black;
+}
+
+.single-meta {
+    margin: 2em 0;
+}
+
+.image-product img {
+	padding: 0;
+}
+
+.add-to-cart button,
+.single_add_to_cart_button {
+	width: 100%;
+    background-color: #53A9C6 !important;
+    height: 35px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    border: 0;
+}
+
+.add-to-cart button span {
+	color: white;
+}
+
+.product-price a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.products li {
+	width: auto;
+	height: 30em;
+}
+
+.info-product {
+	height: 25%;
+	position: relative;
+}
+
+.container-bottom-product {
+	height: 100%;
+}

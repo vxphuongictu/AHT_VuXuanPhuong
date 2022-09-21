@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial;
+  width: 100%;
+  height: 900px;
+}
+
+#line {
+  float: left;
+  margin: 0 40px;
+  border: 1px solid white;
+  border-bottom: 0;
+  border-left: 0;
+  border-top: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.logo a{
+  color: white;
+  text-decoration: none;
+}
+.header {
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  background-color: #1D48A5;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.left-header {
+  width: 90%;
+}
+
+.logo {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.welcome-logo {
+  font-size: 16px;
+  float: left;
+  margin-left: 40px;
+  margin-bottom: 0;
+}
+
+.right-header {
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  height: 40px;
+}
+
+.header img{
+  width: 20px;
+  height: 20px;
+  margin: 7px;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu li{
+  display: inline;
+}
+
+.search-btn {
+  float:  left;
+  line-height: 50px;
+}
+.dot {
+  float: left;
+  line-height: 50px;
+}
+
+.clearfloat {
+  clear: both;
+}
+
+.menu-box {
+  width: 100%;
+  padding-top: 20px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-home img {
+  width: 15em;
+  height: 4em;
+}
+
+.primary-btn {
+  width: 20%;
+}
+
+.logo-home {
+  width: 20%;
+  margin-left: 15px;
+}
+
+/*Main menu*/
+
+.main-menu {
+  width: 70%;
+  height: 100%;
+}
+
+.main-menu a {
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #8B8B8B;
+}
+
+.main-menu ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.primary-btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.primary-btn button {
+  margin: 0 auto;
+}
+
+.main-menu li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.main-menu ul li {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  width: 100%;
+  height: 80%;
+  background-color: #FAFAFA;
+}
+
+.sub-menu .menu-item {
+  float: left;
+}
+
+.menu-item {
+  margin: 0 80px;
+  margin-top: 40px;
+  width: 14%;
+}
+
+.sub-menu hr {
+  width: 1px;
+  height: 80%;
+  float: left;
+  background-color: #E6E6E6;
+}
+
+/*.main-menu a:hover{
+  color: blue;
+}*/
+
+/*.main-menu li:hover {
+  border-bottom: 2px solid blue;
+}*/
+
+.menu-item .item{
+  padding-bottom: 20px;
+}
+
+.menu-item .item a{
+  text-decoration: none;
+  color: #8B8B8B;
+}

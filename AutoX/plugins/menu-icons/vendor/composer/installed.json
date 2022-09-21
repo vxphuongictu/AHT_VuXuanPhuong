@@ -1,0 +1,187 @@
+{
+    "packages": [
+        {
+            "name": "codeinwp/gutenberg-menu-icons",
+            "version": "1.0.4",
+            "version_normalized": "1.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeinwp/gutenberg-menu-icons.git",
+                "reference": "121ef82c57a556301265cbd1032d28619235e488"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codeinwp/gutenberg-menu-icons/zipball/121ef82c57a556301265cbd1032d28619235e488",
+                "reference": "121ef82c57a556301265cbd1032d28619235e488",
+                "shasum": ""
+            },
+            "require-dev": {
+                "automattic/vipwpcs": "^0.3.0 || ^1.0.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "0.6.2",
+                "phpcompatibility/php-compatibility": "^9",
+                "squizlabs/php_codesniffer": "^3.3",
+                "wp-coding-standards/wpcs": "^1"
+            },
+            "time": "2020-05-17T21:08:46+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "load.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ThemeIsle team",
+                    "email": "friends@themeisle.com",
+                    "homepage": "https://themeisle.com"
+                }
+            ],
+            "description": "Menu Icons for Gutenberg",
+            "homepage": "https://github.com/Codeinwp/gutenberg-menu-icons",
+            "support": {
+                "issues": "https://github.com/Codeinwp/gutenberg-menu-icons/issues",
+                "source": "https://github.com/Codeinwp/gutenberg-menu-icons/tree/v1.0.4"
+            },
+            "install-path": "../codeinwp/gutenberg-menu-icons"
+        },
+        {
+            "name": "codeinwp/icon-picker",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeinwp/icon-picker.git",
+                "reference": "0c60ce3a41653e41a20e710c4d5a6a2104c85020"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codeinwp/icon-picker/zipball/0c60ce3a41653e41a20e710c4d5a6a2104c85020",
+                "reference": "0c60ce3a41653e41a20e710c4d5a6a2104c85020",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "require-dev": {
+                "wp-coding-standards/wpcs": "^0.10.0"
+            },
+            "time": "2021-05-05T18:52:26+00:00",
+            "default-branch": true,
+            "type": "wordpress-plugin",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "Pick an icon of your choice.",
+            "homepage": "https://github.com/codeinwp/icon-picker",
+            "keywords": [
+                "dashicons",
+                "elusive",
+                "font-awesome",
+                "foundation-icons",
+                "genericons",
+                "icons",
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/Codeinwp/icon-picker/tree/master"
+            },
+            "install-path": "../codeinwp/icon-picker"
+        },
+        {
+            "name": "codeinwp/menu-item-custom-fields",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeinwp/menu-item-custom-fields.git",
+                "reference": "f491fcfa873e92006e3d92a4ede8775e9cf53bae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codeinwp/menu-item-custom-fields/zipball/f491fcfa873e92006e3d92a4ede8775e9cf53bae",
+                "reference": "f491fcfa873e92006e3d92a4ede8775e9cf53bae",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "require-dev": {
+                "wp-coding-standards/wpcs": "^0.10.0"
+            },
+            "time": "2021-05-05T18:49:57+00:00",
+            "default-branch": true,
+            "type": "wordpress-plugin",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "Easily add custom fields to nav menu items.",
+            "homepage": "https://github.com/Codeinwp/wp-menu-item-custom-fields",
+            "keywords": [
+                "custom-fields",
+                "menu",
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/Codeinwp/menu-item-custom-fields/tree/master"
+            },
+            "install-path": "../codeinwp/menu-item-custom-fields"
+        },
+        {
+            "name": "codeinwp/themeisle-sdk",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeinwp/themeisle-sdk.git",
+                "reference": "bab0314e1f6e2f811116a2da7736b94cbe6af90f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codeinwp/themeisle-sdk/zipball/bab0314e1f6e2f811116a2da7736b94cbe6af90f",
+                "reference": "bab0314e1f6e2f811116a2da7736b94cbe6af90f",
+                "shasum": ""
+            },
+            "require-dev": {
+                "codeinwp/phpcs-ruleset": "dev-main"
+            },
+            "time": "2022-08-23T13:09:40+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "ThemeIsle team",
+                    "email": "friends@themeisle.com",
+                    "homepage": "https://themeisle.com"
+                }
+            ],
+            "description": "ThemeIsle SDK",
+            "homepage": "https://github.com/Codeinwp/themeisle-sdk",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/Codeinwp/themeisle-sdk/issues",
+                "source": "https://github.com/Codeinwp/themeisle-sdk/tree/v3.2.27"
+            },
+            "install-path": "../codeinwp/themeisle-sdk"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

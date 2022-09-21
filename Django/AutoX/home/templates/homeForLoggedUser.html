@@ -1,0 +1,150 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+{% block title %} AutoX - Home {% endblock title %}
+
+{% block content %}
+
+<aside class="panel-menu admin-bar">
+	<section class="nav-menu">
+		<div class="blank-block"></div>
+		<div class="avatar">
+            <!-- avatar user -->
+			<img alt='' src='http://2.gravatar.com/avatar/be35b70ff986a2ea6dbffca1a13f9fda?s=100&#038;d=monsterid&#038;r=g' srcset='http://2.gravatar.com/avatar/be35b70ff986a2ea6dbffca1a13f9fda?s=200&#038;d=monsterid&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' loading='lazy'/>
+            <span class="avatar-content">admin</span>
+        </div>
+
+        <div class="first-menu">
+            <ul id="menu-header-menu-middle-1" class="menu">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-581">
+                    <a href="http://localhost/">HOME</a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-300">
+                    <a>START BIDDING</a>
+                    <ul class="sub-menu">
+	                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-299">
+                            <a href="http://localhost/start-bidding-1/">START BIDDING 1</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-298">
+                            <a href="http://localhost/start-bidding-2/">START BIDDING 2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-301">
+                    <a>ABOUT</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297">
+                            <a href="http://localhost/about-1/">ABOUT 1</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-296">
+                            <a href="http://localhost/about-2/">ABOUT 2</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295">
+                            <a href="http://localhost/about-3/">ABOUT 3</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293">
+                            <a href="http://localhost/about-4-2/">ABOUT 4</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-294">
+                            <a href="http://localhost/about-4/">ABOUT 5</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-302">
+                    <a>SELL YOUR CAR</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-292"><a href="http://localhost/sell-your-car-1/">SELL YOUR CAR 1</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291"><a href="http://localhost/sell-your-car-2-2/">SELL YOUR CAR 2</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-290"><a href="http://localhost/sell-your-car-3/">SELL YOUR CAR 3</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-289"><a href="http://localhost/sell-your-car-4/">SELL YOUR CAR 4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="logout">
+			<a href="http://localhost/wp-content/themes/monsterrat/logout">
+				<i class="fa fa-sign-out" aria-hidden="true"></i>
+				<span>LOGOUT</span>
+			</a>
+		</div>
+        <div class="social">
+            <div class="box-border">
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="box-border">
+                <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="box-border">
+                <a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+	</section>
+</aside><article id="main-body" class="container-fluid">
+    <div class="bg-body"></div>
+    <div class="logo-header admin-bar">
+        <section class="logo">
+            <img src="http://localhost/wp-content/uploads/2022/09/Rectangle-13.svg" alt="header-logo-menu-right">
+        </section>
+
+        <section class="text-in-slide">
+            <div class="text-header">
+                <font style="color: #fff; font-weight: 400">START BIDDING</font>
+                <font style="color: #ffbe00; font-weight: 400">YOUR NEXT CAR</font>
+            </div>
+
+            <div class="text-conent">
+                <font style="color: #fff; font-weight: 500">Choose from thousands of New Cars and Used Cars in Vietnam.</font>
+            </div>
+        </section>
+
+        <section class="search-form">
+            <div class="search-content">
+                <input type="text" name="s" placeholder="Search by model..." onkeyup="search();">
+                <button type="submit" name="search" onclick="search();">Search</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="body-content container">
+        <section class="tab-options">
+            <button class="box-item" value="biddings">
+                <div class="icon">
+                    <i class="fa fa-gavel" aria-hidden="true"></i>
+                </div>
+                <div class="content">
+                    Biddings
+                    <span class="quantity" id="quantity-biddings"></span>
+                </div>
+            </button>
+
+            <button class="box-item" value="favourites">
+                <div class="icon">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="content">
+                    Favourites
+                    <span class="quantity" id="quantity-favourites"></span>
+                </div>
+            </button>
+
+            <button class="box-item" value="results">
+                <div class="icon">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                </div>
+                <div class="content">
+                    Results
+                    <span class="quantity" id="quantity-results"></span>
+                </div>
+            </button>
+        </section>
+        <section class="categories"></section>
+        <section id="list-item"></section>
+    </div>
+</article>
+{% endblock content %}

@@ -1,0 +1,289 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	width: 100%;
+	height: 100vh;
+}
+
+.main-body {
+	width: 100%;
+	height: 100%;
+	margin: 20px;
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.title span {
+	font-size: 40px;
+	width: 20px;
+	font-weight: bold;
+}
+
+.line {
+	margin: 0 auto;
+	width: 80%;
+	border-top: 1px solid grey;
+}
+
+.colours-panel {
+	width: 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px 200px;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	grid-template-areas:
+	"box1 box2 box3"
+	"box4 box5 box6";
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+
+.colours-panel .box-group:first-child {
+	margin: 0 auto;
+	grid-area: box1;
+}
+
+.colours-panel .box-group:nth-child(2) {
+	margin: 0 auto;
+	grid-area: box2;
+}
+
+.colours-panel .box-group:nth-child(3) {
+	margin: 0 auto;
+	grid-area: box3;
+}
+
+.colours-panel .box-group:nth-child(4) {
+	margin: 0 auto;
+	grid-area: box4;
+}
+
+.colours-panel .box-group:nth-child(5) {
+	margin: 0 auto;
+	grid-area: box5;
+}
+
+.colours-panel .box-group:last-child {
+	margin: 0 auto;
+	grid-area: box6;
+}
+
+.box {
+	margin: 0 auto;
+}
+
+.box-group {
+	width: 200px;
+	height: 200px;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.text {
+	margin-top: 10px;
+}
+
+.text input {
+	border: 0;
+	outline: none;
+	border-bottom: 1px solid grey;
+	text-align: center;
+	text-align: center;
+}
+
+.text input:hover {
+	border-bottom: 1px solid red;
+}
+
+.colours-panel .box-group .color-1 {
+	width: 150px;
+	height: 150px;
+	background-color: #E0E0E0;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.colours-panel .box-group .color-2 {
+	width: 150px;
+	height: 150px;
+	background-color: #222222;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.colours-panel .box-group .color-3 {
+	width: 150px;
+	height: 150px;
+	background-color: #B0B0B0;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.colours-panel .box-group .color-4 {
+	width: 150px;
+	height: 150px;
+	background-color: #F1F1F1F1;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.colours-panel .box-group .color-5 {
+	width: 150px;
+	height: 150px;
+	background-color: #4CA5C5;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.colours-panel .box-group .color-6 {
+	width: 150px;
+	height: 150px;
+	background-color: #9E9E9E;
+	border: 1px solid green;
+	text-align: center;
+}
+
+
+.colours-panel-bg {
+	width: 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px 200px;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	grid-template-areas:
+	"box1 box2 box3"
+	"box4 box5 box6";
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+.colours-panel-bg .box {
+	width: 250px;
+	height: 150px;
+}
+
+.colours-panel-bg .box-group:first-child {
+	width: 100%;
+	grid-area: box1;
+}
+
+.colours-panel-bg .box-group:nth-child(2) {
+	width: 100%;
+	grid-area: box2;
+}
+
+.colours-panel-bg .box-group:nth-child(3) {
+	width: 100%;
+	grid-area: box3;
+}
+
+.colours-panel-bg .box-group:nth-child(4) {
+	width: 100%;
+	grid-area: box4;
+}
+
+.colours-panel-bg .box-group:last-child {
+	width: 100%;
+	grid-area: box5;
+}
+
+.colours-panel-bg .text {
+	margin-top: 10px;
+}
+
+.colours-panel-bg .box-group .color-1 {
+	height: 150px;
+	background-color: #b0b0b0;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.colours-panel-bg .box-group .color-2 {
+	height: 150px;
+	background-color: #4CA5C5;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.colours-panel-bg .box-group .color-3 {
+	height: 150px;
+	background-color: #f1f1f1f1;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.colours-panel-bg .box-group .color-4 {
+	height: 150px;
+	background-color: #222222;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.colours-panel-bg .box-group .color-5 {
+	height: 150px;
+	background-color: #F5F5F5;
+	border: 1px solid green;
+	text-align: center;
+}
+
+.font-group .font-box{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.font-group .font-box .description {
+	margin: 0 auto;
+}
+
+.font-group .bold {
+	font-weight: bold;
+}
+
+.font-group .font-1 {
+	font-size: 90px;
+}
+
+.font-group .font-2 {
+	font-size: 70px;
+}
+
+.font-group .font-3 {
+	font-size: 60px;
+}
+
+.font-group .font-4 {
+	font-size: 42px;
+}
+
+.font-group .font-5 {
+	font-size: 18px;
+}
+
+.font-group .font-6 {
+	font-size: 14px;
+}
+
+.font-group .font-7 {
+	font-size: 24px;
+}
+
+.font-group .font-8 {
+	font-size: 20px;
+}
+
+.font-group .font-9 {
+	font-size: 30px;
+}

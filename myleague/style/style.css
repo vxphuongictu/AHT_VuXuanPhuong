@@ -1,0 +1,468 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background-color: #F8F8F8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	padding: 40px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .main-body {
+	width: 90%;
+	height: 90%;
+	display: grid;
+	grid-template-columns: 1fr 0.8fr 0.8fr 1.4fr;
+	grid-template-rows: 30% 30% 10% 30%;
+	grid-template-areas:
+	"choose choose setting ground"
+	"choose choose setting ground"
+	"choose choose setting ground"
+	"x x x ground";
+	grid-column-gap: 20px;
+}
+
+.container .main-body .choose-partner {
+	width: 100%;
+	height: 100%;
+	grid-area: choose;
+}
+
+.container .main-body .setting-up {
+	width: 100%;
+	height: 100%;
+	grid-area: setting;
+}
+
+.container .main-body .choose-partner .cau-thu {
+	padding-bottom: 40px;
+	margin: 0 auto;
+	border: 1px solid #DEE4ED;
+}
+
+.container .main-body .choose-partner .cau-thu .title-cau-thu {
+	overflow: hidden;
+	width: 60%;
+	height: 20px;
+	margin-top: 20px;
+}
+
+.container .main-body .choose-partner .cau-thu .title-cau-thu .so-ao {
+	margin-left: 20%;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.container .main-body .choose-partner .cau-thu .title-cau-thu .ten-ao {
+	margin-left: 18%;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.red-important {
+	color: red;
+	font-weight: bold;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+	text-align: center;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group input {
+	margin-right: 10px;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group .checkbox {
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	margin-right: 20px;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group .checkbox input[type='checkbox'] {
+	appearance:  none;
+	-webkit-appearance:  none;
+	margin: 0;
+	background-color: transparent;
+	width: 1.15em;
+	height: 1.15em;
+	border: 0.15em solid currentColor;
+	border-radius: 0.15em;
+	transform: translateY(-0.075em);
+	display: grid;
+	place-content: center;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group .checkbox input[type='checkbox']::before {
+	content: "";
+	width: 0.65em;
+	height: 0.65em;
+	transform: scale(0);
+	transition: 120ms transform ease-in-out;
+	background-color: green;
+	margin: 0 auto;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group .checkbox input[type='checkbox']:checked::before {
+	transform: scale(1);
+}
+
+.container .main-body .choose-partner .cau-thu .option-group input:first-child {
+	height: 100%;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group input:nth-child(2) {
+	text-align: center;
+	height: 100%;
+	width: 13%;
+	border:  1px solid #E1E6ED;
+	border-radius: 5px;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group input:nth-child(2)::-webkit-outer-spin-button,
+.container .main-body .choose-partner .cau-thu .option-group input:nth-child(2)::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+  	margin: 0;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group input:nth-child(3) {
+	height: 100%;
+	width: 40%;
+	border:  1px solid #E1E6ED;
+	border-radius: 5px;
+	padding-left: 20px;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group select {
+	height: 100%;
+	width: 30%;
+	background: url('https://myleague.vn/content/images/down-arrow.svg') 100% no-repeat;
+	background-size: 32px;
+	padding-right: 30px;
+	padding-left: 20px;
+	-webkit-appearance: none;
+}
+
+.container .main-body .choose-partner .cau-thu .option-group select:focus,
+.container .main-body .choose-partner .cau-thu .option-group input:focus {
+	border: 2px solid green;
+	outline: none;
+}
+
+.container .main-body .setting-up .form-group {
+	width: 95%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+.container .main-body .setting-up .form-group label{
+	width: 100%;
+}
+
+.container .main-body .setting-up .form-group span{
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.container .main-body .setting-up .form-group .input{
+	width: 100%;
+	margin-top: 5px;
+}
+
+.container .main-body .setting-up .form-group .input .nen-san-dau {
+	border: 1px solid #000000;
+	width: 100%;
+	height: 40px;
+	background: url('https://myleague.vn/content/images/down-arrow.svg') 100% no-repeat;
+	background-size: 32px;
+	padding-right: 30px;
+	padding-left: 20px;
+	-webkit-appearance: none;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.container .main-body .setting-up .form-group .input .nen-san-dau #select {
+	padding-bottom:  0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau {
+	width: 250px;
+	height: 200px;
+	overflow: scroll;
+	background-color: black;
+	display: none;
+	position: absolute;
+}
+
+.line{
+	width: 100%;
+	border-bottom: 1px solid white;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau .option{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau .box-color-san-1{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: green;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau .box-color-san-2{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: #64774F;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau .box-color-san-3{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: #646464;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau .box-color-san-4{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: #5D6B39;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau .box-color-san-5{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: #6E6350;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau .box-color-san-6{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: #B28ADE;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau .option:hover {
+	background-color: #4d90fe;
+}
+
+.container .main-body .setting-up .form-group .input .option-nen-san-dau div span{
+	margin: 0 20px;
+	color: white;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+
+.container .main-body .setting-up .form-group .input input{
+	width: 100%;
+	height: 40px;
+	border-radius: 5px;
+	border: 2px solid #EEF2F5;
+}
+
+.container .main-body .setting-up .form-group .input input:focus,
+.container .main-body .setting-up .form-group .input select:focus {
+	border: 2px solid green;
+	outline: none;
+}
+
+.container .main-body .setting-up .form-group .input button {
+	width: 100px;
+	height: 35px;
+}
+
+.container .main-body .setting-up .form-group .input button:first-child {
+	float: left;
+	border-radius: 10px;
+	color: white;
+	border: 1px solid transparent;
+	background-image: linear-gradient(to bottom left, #579C39, #387122, #589D39);
+}
+
+.container .main-body .setting-up .form-group .input button:first-child:hover {
+	background-image: linear-gradient(to bottom right, #579C39, #387122, #589D39);
+}
+
+.container .main-body .setting-up .form-group .input button:last-child {
+	float: right;
+	border-radius: 10px;
+	color: white;
+	background-color: #5D8EF6;
+	border: 1px solid transparent;
+}
+
+.container .main-body .setting-up .form-group .input button i {
+	margin-right: 5px;
+}
+
+.container .main-body .setting-up .form-group select {
+	width: 100%;
+	height: 40px;
+	background: url('https://myleague.vn/content/images/down-arrow.svg') 100% no-repeat;
+	background-size: 32px;
+	padding-right: 30px;
+	padding-left: 20px;
+	-webkit-appearance: none;
+}
+
+.container .main-body .ground {
+	grid-area: ground;
+	overflow: hidden;
+}
+
+.container .main-body .ground .ground-img{
+	position: relative;
+	background-image: url('../images/ground.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+.container .main-body .ground .member{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+}
+
+.container .main-body .ground .member .tshirt-background{
+	width: 80%;
+	height: 80%;
+	margin: 0 auto;
+}
+
+.container .main-body .ground .member .tshirt-background .tshirt-img{
+	background-image: url('../images/tshirt.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background-position: bottom;
+	border: 0;
+}
+
+.container .main-body .ground .member .info-member{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .main-body .ground .member .info-member span{
+	color: white;
+}
+
+.container .main-body .ground .member .info-member span:first-child{
+	margin-right: 5px;
+}
+
+.container .main-body .setting-up .form-group .input .anh-mac-dinh {
+	border: 1px solid #000000;
+	width: 100%;
+	height: 40px;
+	background: url('https://myleague.vn/content/images/down-arrow.svg') 100% no-repeat;
+	background-size: 32px;
+	padding-right: 30px;
+	padding-left: 20px;
+	-webkit-appearance: none;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.container .main-body .setting-up .form-group .input .anh-mac-dinh #select {
+	padding-bottom:  0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.container .main-body .setting-up .form-group .input .option-anh-mac-dinh {
+	width: 250px;
+	height: 200px;
+	overflow: scroll;
+	background-color: black;
+	display: none;
+	position: absolute;
+}
+
+.container .main-body .setting-up .form-group .input .option-anh-mac-dinh div span{
+	margin: 0 20px;
+	color: white;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+
+.container .main-body .setting-up .form-group .input .option-anh-mac-dinh .option:hover {
+	background-color: #4d90fe;
+}
+
+.container .main-body .setting-up .form-group .input .option-anh-mac-dinh .box-color-ao-1{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: #384C5A;
+}
+
+.container .main-body .setting-up .form-group .input .option-anh-mac-dinh .box-color-ao-2{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: #C9B3A5;
+}
+
+.container .main-body .setting-up .form-group .input .option-anh-mac-dinh .box-color-ao-3{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: #484848;
+}
+
+.container .main-body .setting-up .form-group .input .option-anh-mac-dinh .box-color-ao-4{
+	margin-left: 20px;
+	width: 40px;
+	height: 25px;
+	background-color: #7099B5;
+}
+
+
+.container .main-body .setting-up .form-group .input .option-anh-mac-dinh .option{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+}
