@@ -1,14 +1,21 @@
-function search()
+function search(csrf_token)
 {
 	var result 			= []; // container products result
 	var products 		= []; // it's data to show home page
-
+	var global_products = []; // container data of product got on categories
 	var input_value  	= $('.search-content').find('input').val().toLowerCase();
 	if (input_value)
 	{
-		var data_pdc 	= data.products_data;
-		data_pdc.forEach( function(element, index) {
+		var global_data = data;
+		global_data.forEach(function(element)
+		{
+			(element.cat).forEach(function(prd){
+				global_products.push(prd);
+			})
+		});
 
+		var data_pdc 	= global_products;
+		data_pdc.forEach( function(element, index) {
 			var char_same      = 0;
 			var char_length    = 0; // count string of the name product
 			var prdc_name      = element.product_name.toLowerCase();
@@ -41,9 +48,9 @@ function search()
 
 		});
 
-		products['products_data'] = result;
-		show_products(products, box_name, cat_name, page_id_log, page_name_log, max_item_per_page);
+		products 	= result;
+		show_products(products, box_name, cat_id, max_item_per_page, csrf_token);
 	} else {
-		get_data(page_id_log, page_name_log);
+		home(csrf_token, 'home');
 	}
 }

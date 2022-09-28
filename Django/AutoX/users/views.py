@@ -1,9 +1,8 @@
 import json
-
 from django.shortcuts import render
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.http.response import HttpResponse, HttpResponseRedirect
+User    = get_user_model()
 # Create your views here.
 
 
@@ -52,7 +51,7 @@ def _register(request):
         if (agree == "checked"):
             if (full_name != "" and user_register != '' and email_register != '' and new_pass != '' and user_confirm_pass != ''):
                 if (user_confirm_pass == new_pass):
-                    user        = User.objects.create_user(user_register, email_register, new_pass)
+                    user        = User.objects.create_user(full_name, user_register, email_register, new_pass)
                     user.save()
                     result['status']= "success"
                     result['msg']   = "Register successfully"

@@ -67,7 +67,7 @@
 					</div>
 
 					<div class="btn">
-						<button class="btn-submit" id="guest_send_mail" onclick="guest_send_mail();">Submit</button>
+						<button class="btn-submit" id="guest_send_mail" onclick="guest_send_mail('{{ csrf_token }}');">Submit</button>
 					</div>
 				</div>
 			</section>
@@ -78,4 +78,5 @@
 		</div>
 	</div>
 </article>
+<script>home("{{ csrf_token }}", "home-for-none-user");</script>
 {% endblock content %}

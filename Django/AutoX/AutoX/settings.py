@@ -42,13 +42,16 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'products.apps.ProductsConfig',
     'theme.apps.ThemeConfig',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'rest.apps.RestConfig',
+    'django.contrib.humanize',
+    'mail.apps.MailConfig'
 ]
 
 # More information at https://shareeverythings.com/lap-trinh/huong-dan-lap-trinh-web-python-django-restful-api-framework/
 REST_FRAMEWORK  = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 5,
+    'PAGE_SIZE': 6,
     'DEFAULT_PERMISSION_CLASSES' : [],
     'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
@@ -60,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 ROOT_URLCONF = 'AutoX.urls'
@@ -148,4 +151,22 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# LOGIN_URL           = '/login/'
+AUTH_USER_MODEL     = 'users.MyUser'
+
+# Base url to serve media files
+MEDIA_URL = ''
+
+# Path where media is stored
+MEDIA_ROOT      = ''
+
+
+## smtp mai google server ##
+EMAIL_HOST      = "smtp.gmail.com"
+EMAIL_PORT      = 587
+EMAIL_HOST_USER     = "Vxphuongictu998@gmail.com"
+EMAIL_HOST_PASSWORD = "qmejiallczpcdchm"
+EMAIL_USE_TLS   = True
+EMAIL_USE_SSL   = False
+
+# Email to receive information #
+RECEIVE_MAIL    = "Vxphuongictu998@gmail.com"

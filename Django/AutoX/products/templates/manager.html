@@ -1,0 +1,183 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+{% block title %}AutoX - Product Manager{% endblock title %}
+
+{% block content %}
+
+    {{ db_tables }}
+    <article class="product-manager container-fluid">
+    	<div class="manager-body container">
+
+    		<section class="db-manager">
+    			<div class="display-db">
+    				<ul class="menu">
+    					<li><a href="#" id="categories-manager">Categories</a></li>
+    					<li><a href="#" id="product-manager">Products</a></li>
+    				</ul>
+    			</div>
+    		</section>
+
+    		<section class="panel-categories-manager">
+    			<h2>Categories Manager</h2>
+    			<div class="display-categories-manager">
+    				<div class="display">
+                        <ul class="cat-list">
+                            {% for category in categories %}
+                                <li><a href="#" id="{{ category.id }}">{{ category.cat_name }}</a></li>
+                            {% endfor %}
+                        </ul>
+    				</div>
+    			</div>
+    			<div class="input-form-categories-manager">
+    				<div class="form-group">
+    					<label for="cat_name">Category name:</label>
+    					<input type="text" id="category_name" placeholder="Local" value="">
+    				</div>
+    			</div>
+    		</section>
+
+    		<section class="panel-product-manager">
+    			<h2>Products Manager</h2>
+    			<div class="display-product-manager">
+    				<div class="display">
+                        <ul class="product-list">
+                            {% for prd in products %}
+                                <li><a href="#" id="{{ prd.id }}">{{ prd.product_name }}</a></li>
+                            {% endfor %}
+                        </ul>
+    				</div>
+    			</div>
+    			<div class="input-form-product-manager">
+                    <div class="main-form-group">
+                        <div class="form-group">
+                            <label for="prd_name">Product name:</label>
+                            <input type="text" id="prd_name" placeholder="Product name" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_description">Product description:</label>
+                            <input type="text" id="prd_description" placeholder="Product description" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_price">Product price:</label>
+                            <input type="text" id="prd_price" placeholder="Product price" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_image">Product image:</label>
+                            <input type="text" id="prd_image" placeholder="Product image" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_create_time">Product create time:</label>
+                            <input type="text" id="prd_create_time" placeholder="Product create time" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_category">Category:</label>
+                            <select id="prd_select_category">
+                                {% for category in categories %}
+                                    <option value="{{ category.id }}"> {{ category.cat_name }} </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_kilometer">Kilometer:</label>
+                            <select id="prd_kilometer">
+                                <input type="hidden" id="prd_kilometer_meta_key" value="_kilometer">
+                                <input type="text" id="prd_kilometer_meta_value" placeholder="Product kilometer" value="29400">
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_fuel">Fuel:</label>
+                            <select id="prd_fuel">
+                                <input type="hidden" id="prd_fuel_meta_key" value="_fuel">
+                                <input type="text" id="prd_fuel_meta_value" placeholder="Product fuel" value="Gasoline">
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_cheaper">Cheaper:</label>
+                            <select id="prd_cheaper">
+                                <input type="hidden" id="prd_cheaper_meta_key" value="_cheaper">
+                                <input type="text" id="prd_cheaper_meta_value" placeholder="Product cheaper" value="">
+                            </select>
+                        </div>
+
+                        <input type="hidden" id="prd_post_time_meta_key" value="_post_time">
+                        <input type="text" id="prd_post_time_meta_value" value="">
+
+                        <div class="form-group">
+                            <label for="prd_at">AT:</label>
+                            <input type="hidden" id="prd_at_meta_key" value="_at">
+                            <input type="text" id="prd_at_meta_value" placeholder="Product at" value="AT">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_auction_price">Auction price:</label>
+                            <input type="hidden" id="prd_auction_price_meta_key" value="_auction_price">
+                            <input type="number" id="prd_auction_price_meta_value" placeholder="Product auction price" value="326750000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_time_remaining">Time remaining:</label>
+                            <input type="hidden" id="prd_time_remaining_meta_key" value="_time_remaining">
+                            <input type="text" id="prd_time_remaining_meta_value" placeholder="Product time remaining" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_condition">Product Condition:</label>
+                            <input type="hidden" id="prd_condition_meta_key" value="_condition">
+                            <input type="text" id="prd_condition_meta_value" placeholder="Product condition" value="Used">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_color">Product Color:</label>
+                            <input type="hidden" id="prd_color_meta_key" value="_color">
+                            <input type="text" id="prd_color_meta_value" placeholder="Product color" value="Gray">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_reg_date">Product Reg Date:</label>
+                            <input type="hidden" id="prd_reg_date_meta_key" value="_reg_date">
+                            <input type="text" id="prd_reg_date_meta_value" placeholder="Product reg date" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_body_type">Product Body type:</label>
+                            <input type="hidden" id="prd_body_type_meta_key" value="_body_type">
+                            <input type="text" id="prd_body_type_meta_value" placeholder="Product body type" value="Hatchback">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_manufacturing_year">Product manufacturing year:</label>
+                            <input type="hidden" id="prd_manufacturing_year_meta_key" value="_manufacturing_year">
+                            <input type="number" id="prd_manufacturing_year_meta_value" placeholder="Product body type" value="2018">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_power">Product Power:</label>
+                            <select id="prd_power">
+                                <input type="hidden" id="prd_power_meta_key" value="_power">
+                                <input type="number" id="prd_power_meta_value" placeholder="Product Power" value="182">
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prd_seats">Product Seats:</label>
+                            <select id="prd_seats">
+                                <input type="hidden" id="prd_seats_meta_key" value="_seats">
+                                <input type="number" id="prd_seats_meta_value" placeholder="Product Power" value="5">
+                            </select>
+                        </div>
+
+                    </div>
+    			</div>
+    		</section>
+    	</div>
+    </article>
+{% endblock content %}

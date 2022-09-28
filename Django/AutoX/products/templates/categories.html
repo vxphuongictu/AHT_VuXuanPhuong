@@ -1,0 +1,11 @@
+<button class="category-option" id="select-All" value="0">
+    <div class="title">All</div>
+    <span class="quantity" id="quantity-All">&nbsp;({{ totalCount }})</span>
+</button>
+
+{% for cat_result in categories %}
+<button class="category-option" id="select-{{ cat_result.cat_id }}" value="{{ cat_result.cat_id }}">
+    <div class="title">{{ cat_result.cat_name }}</div>
+    <span class="quantity" id="quantity-{{ cat_result.cat_id }}">&nbsp;({{ cat_result.cat_count }})</span>
+</button>
+{% endfor %}

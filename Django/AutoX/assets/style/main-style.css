@@ -552,11 +552,11 @@ a {
 }
 
 .body-content .categories .category-option:nth-child(3) {
-	width: 10.6	rem;
+	width: 10.6rem;
 }
 
 .body-content .categories .category-option:last-child {
-	width: 13.6	rem;
+	width: 13.6rem;
 }
 /* body product for logged user end */
 
@@ -878,11 +878,13 @@ a {
 .item-group-home-user__link .image-item {
 	overflow: hidden;
     border-radius: 15px;
-    height: 100%;
+    width: 17em;
+    height: 13em;
 }
 
 .item-group-home-user__link .image-item img {
 	height: 100%;
+	width: 100%;
 	object-fit: cover;
 	border-radius: 15px;
 }
@@ -977,7 +979,8 @@ a {
 .item-group-none-user__link .image-item {
 	overflow: hidden;
     border-radius: 15px;
-    height: 100%;
+    width: 17em;
+    height: 13em;
 }
 
 .item-group-none-user__link .image-item img {

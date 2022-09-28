@@ -1,11 +1,14 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
-from rest_framework.routers import DefaultRouter
+from home import views as view_home
 
-
-router  = DefaultRouter()
-router.register('products', views.ProductViewSet)
-
-urlpatterns     = [
-    path('product_api/', include(router.urls)),
+urlpatterns    = [
+    path('', views.index, name="index"),
+    path('categories/', views.categories, name="categories"),
+    path('products/', views.products, name="products"),
+    path('detail/', view_home.index, name="home page"),
+    path('detail/<int:p_id>/', views.detail, name="detail product"),
+    path('wishlist/', views.countWishList, name="count wishlist"),
+    path('wishlist/<int:prd_id>/', views.wishlist, name="wishlist"),
+    path('manager/', views.manager, name="manager product")
 ]
