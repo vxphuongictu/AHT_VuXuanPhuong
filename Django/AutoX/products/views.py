@@ -55,7 +55,7 @@ def detail(request, p_id):
         login       = True
     else:
         login       = False
-        
+
     context         = {"login": login, "product_info": main_product, "detail_product": meta_arr, 'gallery_product': list(gallery_product), 'wishlist': wishlist_arr}
     return render(request, template_name="detail-product.html", context=context)
 
