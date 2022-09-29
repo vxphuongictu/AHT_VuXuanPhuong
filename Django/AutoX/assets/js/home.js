@@ -1,6 +1,7 @@
 /* Get data on db */
 var data 				= [];
 var page_name_log 		= "";
+var csrf_token_log		= "";
 var box_name 		 	= "biddings"; // default box
 var cat_id 		 		= 0; // default cat is All
 var max_item_per_page 	= 5; // default
@@ -9,6 +10,7 @@ var wishlist_arr		= [];
 function home(csrf_token, page_name)
 {
 	page_name_log 	= page_name ? page_name : page_name_log;
+	csrf_token_log 	= csrf_token ? csrf_token : csrf_token_log;
 
 	$.ajax({
 		url 	: '/rest/jointables/?limit=5000',
@@ -55,16 +57,18 @@ function home(csrf_token, page_name)
 			});
 		},
 		complete 	: function () {
-			if (page_name == "home")
+			if (page_name_log == "home")
 			{
 				show_count_box_item(data);
-				show_categories(data, csrf_token);
+				show_categories(data, csrf_token_log);
 			} else {
 				max_item_per_page 	= 6;
 			}
-			get_action(data, csrf_token);
+			get_action(data, csrf_token_log);
 		}
 	});
+
+	setTimeout(home, 60000);
 }
 /* Get data on db end */
 
