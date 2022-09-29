@@ -15,8 +15,8 @@
 						<div class="yith-wcwl-add-to-wishlist">
 							<!-- ADD TO WISHLIST -->
 							<div class="yith-wcwl-add-button">
-								<a onclick="wishList('{{ product_info.id }}', '{{ csrf_token }}', 'single-product');">
-									<i class="yith-wcwl-icon {% if product_info.id in wishlist %}fa fa-heart{% else %}fa fa-heart-o{% endif %}" aria-hidden="true"></i>
+								<a onclick="wishList('{{ product_info.product_id }}', '{{ csrf_token }}', 'single-product');">
+									<i class="yith-wcwl-icon {% if product_info.product_id in wishlist %}fa fa-heart{% else %}fa fa-heart-o{% endif %}" aria-hidden="true"></i>
                                     <span></span>
 								</a>
 							</div>
@@ -43,111 +43,155 @@
 							<h3>Specification</h3>
 							<div class="more-info">
 								<div class="more-info-line-1">
+                                    {% if detail_product.0.kilometer %}
 									<div class="kilometer">
 										<div class="icon">
 											<img src="{% static 'images/Vector-3.png' %}" alt="">
 										</div>
-										<span class="content">{{ detail_product.product_kilometer|intcomma }} km</span>
+										<span class="content">{{ detail_product.0.kilometer|intcomma }} km</span>
 									</div>
+                                    {% endif %}
+
+                                    {% if detail_product.0.fuel %}
 									<div class="fuel">
 										<div class="icon">
 											<img src="{% static 'images/Group-119.png' %}" alt="">
 										</div>
-										<span class="content">{{ detail_product.product_fuel }}</span>
+										<span class="content">{{ detail_product.0.fuel }}</span>
 									</div>
+                                    {% endif %}
+
 								</div>
 								<div class="more-info-line-2">
+                                    {% if detail_product.0.post_time %}
 									<div class="time">
 										<div class="icon">
 											<img src="{% static 'images/Group-11.png' %}" alt="">
 										</div>
-										<span class="content">{{ detail_product.product_reg_date}} </span>
+										<span class="content">{{ detail_product.0.post_time }} </span>
 									</div>
+                                    {% endif %}
+
+                                    {% if detail_product.0.at %}
 									<div class="unknow">
 										<div class="icon">
 											<img src="{% static 'images/Vector-4.png' %}" alt="">
 										</div>
-										<span class="content">{{ detail_product.product_at }}</span>
+										<span class="content">{{ detail_product.0.at }}</span>
 									</div>
+                                    {% endif %}
 								</div>
 								<div class="more-info-line-3">
+                                    {% if detail_product.0.cheaper %}
 									<div class="cheaper">
 										<div class="icon">
 											<img src="{% static 'images/Vector-7.png' %}" alt="">
 										</div>
-										<span class="content">{{ detail_product.product_cheaper | intcomma }} VND Cheaper</span>
+										<span class="content">{{ detail_product.0.cheaper | intcomma }} VND Cheaper</span>
 									</div>
+                                    {% endif %}
 								</div>
 							</div>
 							<div class="line"></div>
+                            {% if product_info.product_price %}
 							<div class="auction-price">
 								<h2 class="title">Auction Price:</h2>
-								<div class="content">{{ detail_product.product_auction_price | intcomma }} VND</div>
+								<div class="content">{{ product_info.product_price | intcomma }} VND</div>
 							</div>
+                            {% endif %}
+
+                            {% if detail_product.0.time_remaining %}
 							<div class="time-remaining">
 								<h2 class="title">Time remaining:</h2>
 								<div class="content">
-									<span id="days-{{ product_info.id }}"></span>
-									<span id="hours-{{ product_info.id }}"></span>
-									<span id="minutes-{{ product_info.id }}"></span>
+									<span id="days-{{ product_info.product_id }}"></span>
+									<span id="hours-{{ product_info.product_id }}"></span>
+									<span id="minutes-{{ product_info.product_id }}"></span>
 								</div>
 							</div>
+                            {% endif %}
 						</div>
 					</div>
 				</div>
+
+                {% if product_info.product_description %}
 				<div class="product-detail">
 					<h2>Vehicle details</h2>
 					<div class="detail-content">{{ product_info.product_description }}</div>
 				</div>
+                {% endif %}
 				<div class="product-vehicle">
 					<h2>Vehicle details</h2>
 					<div class="vehicle-content">
+                        {% if detail_product.0.condition %}
 						<div class="condition">
 							<div class="title">Condition</div>
-							<div class="content">{{ detail_product.product_condition }}</div>
+							<div class="content">{{ detail_product.0.condition }}</div>
 						</div>
+                        {% endif %}
+
+                        {% if detail_product.0.color %}
 						<div class="colour">
 							<div class="title">Original Colour</div>
-							<div class="content">{{ detail_product.product_color }}</div>
+							<div class="content">{{ detail_product.0.color }}</div>
 						</div>
+                        {% endif %}
+
+                        {% if detail_product.0.reg_date %}
 						<div class="reg-date">
 							<div class="title">Reg. Date</div>
-							<div class="content">{{ detail_product.product_reg_date }}</div>
+							<div class="content">{{ detail_product.0.reg_date }}</div>
 						</div>
+                        {% endif %}
+
+                        {% if detail_product.0.body_type %}
 						<div class="body-type">
 							<div class="title">Body Type</div>
-							<div class="content">{{ detail_product.product_body_type }}</div>
+							<div class="content">{{ detail_product.0.body_type }}</div>
 						</div>
+                        {% endif %}
+
+                        {% if detail_product.0.manufacturing_year %}
 						<div class="manufacturing-year">
 							<div class="title">Manufacturing year</div>
-							<div class="content">{{ detail_product.product_manufacturing_year }}</div>
+							<div class="content">{{ detail_product.0.manufacturing_year }}</div>
 						</div>
+                        {% endif %}
+
+                        {% if detail_product.0.power %}
 						<div class="power">
 							<div class="title">Power</div>
-							<div class="content">{{ detail_product.product_power }} hp</div>
+							<div class="content">{{ detail_product.0.power }} hp</div>
 						</div>
+                        {% endif %}
+
+                        {% if detail_product.0.seats %}
 						<div class="seats">
 							<div class="title">Seats</div>
-							<div class="content">{{ detail_product.product_seats }} seats</div>
+							<div class="content">{{ detail_product.0.seats }} seats</div>
 						</div>
+                        {% endif %}
+
+                        {% if detail_product.0.condition %}
 						<div class="colour">
 							<div class="title">Condition</div>
-							<div class="content">{{ detail_product.product_condition }}</div>
+							<div class="content">{{ detail_product.0.condition }}</div>
 						</div>
+                        {% endif %}
 					</div>
 				</div>
 				<div class="line"></div>
 				<div class="footer-product">
 					<h2>Like this vehicle?</h2>
-					<div class="result-quick-quote" id="result-quick-quote-{{ product_info.id }}"></div>
+					<div class="result-quick-quote" id="result-quick-quote-{{ product_info.product_id }}"></div>
 					<div class="content">
 						<div class="search-group">
-							<input type="text" placeholder="Enter quote for this vehicle" id="quick-quote-message-{{ product_info.id }}">
-							<button type="submit" class="btn-submit-quick-quote" id="btn-submit-quick-quote-{{ product_info.id }}" onclick="user_send_mail(this, '{{ csrf_token }}');" value="{{ product_info.id }}" name="">Submit</button>
+							<input type="text" placeholder="Enter quote for this vehicle" id="quick-quote-message-{{ product_info.product_id }}">
+							<button type="submit" class="btn-submit-quick-quote" id="btn-submit-quick-quote-{{ product_info.product_id }}" onclick="user_send_mail(this, '{{ csrf_token }}');" value="{{ product_info.product_id }}" name="">Submit</button>
 						</div>
 					</div>
 				</div>
-                <script> makeTimer('{{ product_info.id }}', '{{ detail_product.product_time_remaining }}'); </script>
+                <script> makeTimer('{{ product_info.product_id }}', '{{ detail_product.0.time_remaining }}'); </script>
             </div>
         </section>
         <section class="column-right">
@@ -157,11 +201,11 @@
 				</div>
 				<div class="column-right-content">
 					<div class="like-vehicle">
-						<div class="result-quick-quote" id="like-vehicle-{{ product_info.id }}"></div>
+						<div class="result-quick-quote" id="like-vehicle-{{ product_info.product_id }}"></div>
 						<div class="form-quote">
-							<input type="text" id="quick-quote-message-col-right-{{ product_info.id }}" placeholder="Enter quote">
+							<input type="text" id="quick-quote-message-col-right-{{ product_info.product_id }}" placeholder="Enter quote">
 						</div>
-						<button type="submit" class="btn-submit-quick-quote" value="{{ product_info.id }}" onclick="user_send_mail_col_right(this, '{{ csrf_token }}')" name="">Submit</button>
+						<button type="submit" class="btn-submit-quick-quote" value="{{ product_info.product_id }}" onclick="user_send_mail_col_right(this, '{{ csrf_token }}')" name="">Submit</button>
 					</div>
 				</div>
 			</div>

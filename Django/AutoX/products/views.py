@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from products.models import *
 import json
+from datetime import datetime
 
 def index(request):
     return HttpResponse()
@@ -37,14 +38,25 @@ def wishlist(request, prd_id):
 
 def detail(request, p_id):
     wishlist_arr    = []
+    meta_arr        = []
+    result          = {}
     post_id         = int(p_id)
     main_product    = Product.objects.get(pk=post_id)
-    detail_product  = main_product.product.get()
+    meta_product    = Product.objects.raw('SELECT * FROM `products` INNER JOIN `Product_attribute_value` ON products.product_id = Product_attribute_value.product_id INNER JOIN `product_attributes` ON Product_attribute_value.attribute_id = product_attributes.attribute_id WHERE products.product_id = '+str(post_id))
+    for item in meta_product:
+        result[item.attribute_name] = item.attribute_value
+    meta_arr.append(result)
     gallery_product = main_product.gallery.all()
     wishlist        = Product_wishlist.objects.filter(user_id=request.user.id).all()
     for i in wishlist:
         wishlist_arr.append(i.prd_id)
-    context         = {"product_info": main_product, "detail_product": detail_product, 'gallery_product': list(gallery_product), 'wishlist': wishlist_arr}
+
+    if (request.user.is_authenticated):
+        login       = True
+    else:
+        login       = False
+        
+    context         = {"login": login, "product_info": main_product, "detail_product": meta_arr, 'gallery_product': list(gallery_product), 'wishlist': wishlist_arr}
     return render(request, template_name="detail-product.html", context=context)
 
 def categories(request):
@@ -55,14 +67,14 @@ def categories(request):
     if request.method == "POST":
         data   = json.loads(request.POST['categories'])
         for item in data:
-            totalCount+=len(item['cat'])
+            totalCount+=len(item['on_cat'])
         context['totalCount'] = totalCount
 
         for item in data:
             payload     = {
-                'cat_id'    : item['id'],
+                'cat_id'    : item['cat_id'],
                 'cat_name'  : item['cat_name'],
-                'cat_count' : len(item['cat'])
+                'cat_count' : len(item['on_cat'])
             }
             result.append(payload)
         context['categories'] = result

@@ -6,46 +6,30 @@ class GalleryImageSerializers(serializers.ModelSerializer):
         model       = GalleryImageProduct
         fields      = ['image']
 
-class ProductDetailSerializers(serializers.ModelSerializer):
+class JoinTableSerializers(serializers.ModelSerializer):
     class Meta:
-        model       = Product_meta
-        fields      = [
-            'product_kilometer',
-            'product_fuel',
-            'product_cheaper',
-            'product_post_time',
-            'product_at',
-            'product_auction_price',
-            'product_time_remaining',
-            'product_condition',
-            'product_color',
-            'product_reg_date',
-            'product_body_type',
-            'product_manufacturing_year',
-            'product_power',
-            'product_seats'
-        ]
-
-class ProductSerializers(serializers.ModelSerializer):
-    product         = ProductDetailSerializers(many=True)
-    gallery         = GalleryImageSerializers(many=True)
-    class Meta:
-        model       = Product
-        fields      = [
-            'id',
+        model   = Jointablesmodel
+        fields  = [
+            'product_id',
             'product_name',
             'product_description',
             'product_price',
             'product_image',
-            'product_create_time',
-            'category_id',
-            'product',
-            'gallery'
+            'attribute_name',
+            'attribute_value',
+            'post_time',
+            'cat_id',
+            'cat_name'
         ]
 
 
-class CategoriesSerializers(serializers.ModelSerializer):
-    cat         = ProductSerializers(many=True)
+class ProductSerializers(serializers.ModelSerializer):
     class Meta:
-        model   = Categories
-        fields  = ['id', 'cat_name', 'cat']
+        model       = Product
+        fields      = ['product_id', 'product_name','product_description', 'product_price', 'product_image', 'product_create_time']
+
+class CategoriesSerializers(serializers.ModelSerializer):
+    on_cat          = ProductSerializers(many=True)
+    class Meta:
+        model       = Categories
+        fields      = ['cat_id', 'cat_name', 'on_cat']

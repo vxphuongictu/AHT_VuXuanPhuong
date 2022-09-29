@@ -1,5 +1,5 @@
 /* Get data on db */
-var data 				= "";
+var data 				= [];
 var page_name_log 		= "";
 var box_name 		 	= "biddings"; // default box
 var cat_id 		 		= 0; // default cat is All
@@ -11,21 +11,60 @@ function home(csrf_token, page_name)
 	page_name_log 	= page_name ? page_name : page_name_log;
 
 	$.ajax({
-			url 	: '/rest/categories/',
-			type 	: 'GET',
-			data 	: {},
-			success : function (respone) {
-				data 		= respone.results;
-				if (page_name == "home")
+		url 	: '/rest/jointables/?limit=5000',
+		type 	: 'GET',
+		data 	: {},
+		success : function (respone) {
+			var log_prd_id 	= [];
+			respone_data	= respone.results;
+			respone_data.forEach(function(element, index)
+			{
+				if (log_prd_id.indexOf(element.product_id) < 0)
 				{
-					show_count_box_item(data);
-					show_categories(data, csrf_token);
-				} else {
-					max_item_per_page 	= 6;
+					var result 		= {
+						'product_id': '', 
+						'product_name': '', 
+						'product_description': '', 
+						'product_price': '', 
+						'product_image': '', 
+						'cat_id': '', 
+						'cat_name': '', 
+						'attributes': ''
+					}
+
+					result['product_id']			= element.product_id;
+					result['product_name']			= element.product_name;
+					result['product_description']	= element.product_description;
+					result['product_price']			= element.product_price;
+					result['product_image']			= element.product_image;
+					result['cat_id']				= element.cat_id;
+					result['cat_name']				= element.cat_name;
+					log_prd_id.push(element.product_id);
+
+					var attribute_item					= {};
+					respone_data.forEach(function(e, index)
+					{
+						if (e.product_id == element.product_id)
+						{
+							attribute_item[e.attribute_name] 		= e.attribute_value;
+						}
+					});
+					result['attributes'] 	= attribute_item;
+					data.push(result);
 				}
-				get_action(data, csrf_token);
+			});
+		},
+		complete 	: function () {
+			if (page_name == "home")
+			{
+				show_count_box_item(data);
+				show_categories(data, csrf_token);
+			} else {
+				max_item_per_page 	= 6;
 			}
-		});
+			get_action(data, csrf_token);
+		}
+	});
 }
 /* Get data on db end */
 
@@ -62,19 +101,12 @@ function show_products(data, box_name, cat_id, max_item_per_page, csrf_token)
 	var list_products 	= [];
 
 	(data).forEach( function(element, index) {
-		if (element.cat)
-		{
-			(element.cat).forEach(function(element, index){
-				list_products.push(element);
-			});
-		} else {
-			list_products.push(element);
-		}
+		list_products.push(element);
 	});
 
 	list_products.forEach(function(element, index)
 	{
-		var product_id 	= element.id;
+		var product_id 	= element.product_id;
 
 		if (log_id.indexOf(product_id) < 0)
 		{
@@ -87,7 +119,7 @@ function show_products(data, box_name, cat_id, max_item_per_page, csrf_token)
 					if (cat_id == 0)
 					{
 						products.push(element);
-					} else if (cat_id == element.category_id) {
+					} else if (cat_id == element.cat_id) {
 						products.push(element);
 					}
 				}
@@ -97,8 +129,7 @@ function show_products(data, box_name, cat_id, max_item_per_page, csrf_token)
 			{
 
 				/* get data if click in result box item */
-				var ending_date_content = element.product[0].product_time_remaining
-;
+				var ending_date_content = element.attributes.time_remaining;
 
 				/* copy at countdown.js */
 				var endTime 		= new Date(ending_date_content);
@@ -116,7 +147,7 @@ function show_products(data, box_name, cat_id, max_item_per_page, csrf_token)
 					if (cat_id == 0)
 					{
 						products.push(element);
-					} else if (cat_id == element.category_id) {
+					} else if (cat_id == element.cat_id) {
 						products.push(element);
 					}
 				}
@@ -128,7 +159,7 @@ function show_products(data, box_name, cat_id, max_item_per_page, csrf_token)
 				if (cat_id == 0)
 				{
 					products.push(element);
-				} else if (cat_id == element.category_id) {
+				} else if (cat_id == element.cat_id) {
 					products.push(element);
 				}
 				/* get data if click in biddings box item end */
@@ -153,7 +184,14 @@ function show_products(data, box_name, cat_id, max_item_per_page, csrf_token)
 function show_categories(data, csrf_token)
 {
 	/* show category name */
-	$('.categories').load('/products/categories/', {categories: JSON.stringify(data), csrfmiddlewaretoken: csrf_token});
+	$.ajax({
+			url 		: '/rest/categories/',
+			type 		: 'GET',
+			data 		: {},
+			success 	: function (data) {
+				$('.categories').load('/products/categories/', {categories: JSON.stringify(data.results), csrfmiddlewaretoken: csrf_token});
+			}
+		});
 	/* show category name end */
 }
 /* show categories name end */
@@ -166,11 +204,7 @@ function show_count_box_item(data)
 	var total_favourite 	= 0;
 
 	/* show count biddings */
-	data.forEach(function(element, index){
-		(element.cat).forEach(function(item){
-			total_biddings++;
-		});
-	});
+	total_biddings 			= data.length;
 	$('#quantity-biddings').html("("+total_biddings+")");
 	/* show count biddings end */
 
@@ -191,30 +225,28 @@ function show_count_box_item(data)
 	/* show count result */
 	var log_id 				= [];
 
-	data.forEach(function(element, index){
-		(element.cat).forEach(function(item){
-			var product_id 		= item.id;
-			var date_time 		= item.product[0].product_time_remaining;
+	data.forEach(function(item, index){
+		var product_id 		= item.product_id;
+		var date_time 		= item.attributes.time_remaining;
 
-			if (log_id.indexOf(product_id) < 0)
-			{
-				log_id.push(product_id);
-				/* copy at countdown.js */
-				var endTime 		= new Date(date_time);
-				endTime 			= (Date.parse(endTime) / 1000);
+		if (log_id.indexOf(product_id) < 0)
+		{
+			log_id.push(product_id);
+			/* copy at countdown.js */
+			var endTime 		= new Date(date_time);
+			endTime 			= (Date.parse(endTime) / 1000);
 
-				var now 			= new Date();
-				now 				= (Date.parse(now) / 1000);
+			var now 			= new Date();
+			now 				= (Date.parse(now) / 1000);
 
-				var timeLeft 		= endTime - now;
-				var days 			= Math.floor(timeLeft / 86400); 
-				/* copy at countdown.js end */
+			var timeLeft 		= endTime - now;
+			var days 			= Math.floor(timeLeft / 86400); 
+			/* copy at countdown.js end */
 
-				if (days < 0) {
-					total_result++;
-				}
+			if (days < 0) {
+				total_result++;
 			}
-		});
+		}
 	});
 
 	$('#quantity-results').html("("+total_result+")");

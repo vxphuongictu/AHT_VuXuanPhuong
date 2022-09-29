@@ -6,15 +6,7 @@ function search(csrf_token)
 	var input_value  	= $('.search-content').find('input').val().toLowerCase();
 	if (input_value)
 	{
-		var global_data = data;
-		global_data.forEach(function(element)
-		{
-			(element.cat).forEach(function(prd){
-				global_products.push(prd);
-			})
-		});
-
-		var data_pdc 	= global_products;
+		var data_pdc 	= data;
 		data_pdc.forEach( function(element, index) {
 			var char_same      = 0;
 			var char_length    = 0; // count string of the name product
