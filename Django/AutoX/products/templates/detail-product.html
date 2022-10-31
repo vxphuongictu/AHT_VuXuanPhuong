@@ -95,21 +95,28 @@
 							<div class="line"></div>
                             {% if product_info.product_price %}
 							<div class="auction-price">
-								<h2 class="title">Auction Price:</h2>
-								<div class="content">{{ product_info.product_price | intcomma }} VND</div>
+								<h2 class="title">Price:</h2>&nbsp;
+								<div class="content">$ {{ product_info.product_price | intcomma }}</div>
 							</div>
                             {% endif %}
 
                             {% if detail_product.0.time_remaining %}
 							<div class="time-remaining">
-								<h2 class="title">Time remaining:</h2>
+								<h2 class="title">Add time:</h2>
 								<div class="content">
-									<span id="days-{{ product_info.product_id }}"></span>
-									<span id="hours-{{ product_info.product_id }}"></span>
-									<span id="minutes-{{ product_info.product_id }}"></span>
+									<span id="add-time-{{ product_info.product_id }}"></span>
 								</div>
 							</div>
                             {% endif %}
+						</div>
+
+						<div class="action">
+							<button class="btn-favorite" id="product-{{ product_info.product_id }}" onclick="wishList('{{ product_info.product_id }}', '{{ csrf_token }}', 'home');">
+		                        <i class="{% if product_info.product_id in wishlist %}fa fa-heart{% else %}fa fa-heart-o{% endif %}" aria-hidden="true"></i>
+		                    </button>
+		                    <button class="btn-add-to-cart" onclick="addCart(this, '{{ product_info.product_id }}')">
+		                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+		                    </button>
 						</div>
 					</div>
 				</div>
@@ -180,57 +187,12 @@
                         {% endif %}
 					</div>
 				</div>
-				<div class="line"></div>
-				<div class="footer-product">
-					<h2>Like this vehicle?</h2>
-					<div class="result-quick-quote" id="result-quick-quote-{{ product_info.product_id }}"></div>
-					<div class="content">
-						<div class="search-group">
-							<input type="text" placeholder="Enter quote for this vehicle" id="quick-quote-message-{{ product_info.product_id }}">
-							<button type="submit" class="btn-submit-quick-quote" id="btn-submit-quick-quote-{{ product_info.product_id }}" onclick="user_send_mail(this, '{{ csrf_token }}');" value="{{ product_info.product_id }}" name="">Submit</button>
-						</div>
-					</div>
-				</div>
-                <script> makeTimer('{{ product_info.product_id }}', '{{ detail_product.0.time_remaining }}'); </script>
+                <script> timeAgo('{{ product_info.product_id }}', '{{ product_info.product_create_time }}'); </script>
             </div>
         </section>
-        <section class="column-right">
-			<div class="group-1">
-				<div class="column-right-title">
-					<h1>Like this vehicle?</h1>
-				</div>
-				<div class="column-right-content">
-					<div class="like-vehicle">
-						<div class="result-quick-quote" id="like-vehicle-{{ product_info.product_id }}"></div>
-						<div class="form-quote">
-							<input type="text" id="quick-quote-message-col-right-{{ product_info.product_id }}" placeholder="Enter quote">
-						</div>
-						<button type="submit" class="btn-submit-quick-quote" value="{{ product_info.product_id }}" onclick="user_send_mail_col_right(this, '{{ csrf_token }}')" name="">Submit</button>
-					</div>
-				</div>
-			</div>
-			<div class="line"></div>
-			<div class="group-2">
-				<div class="column-right-title">
-					<h1>Need help?</h1>
-				</div>
-				<div class="column-right-content">
-					<a class="location" href="#">
-						<i class="fa fa-map-marker" aria-hidden="true"></i>
-						<div class="location-text">121 Kim Nguu, Hai Ba Trung Disctrict, Hanoi</div>
-					</a>
-					<a class="email" href="#">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						<div class="email-text">hello@servisense.vn</div>
-					</a>
-					<a class="phone" href="#">
-						<i class="fa fa-phone" aria-hidden="true"></i>
-						<div class="phone-text">(+84) 964 936 939</div>
-					</a>
-				</div>
-			</div>
-		</section>
+        {% include 'help.html' %}
 	</div>
+    {% include 'comment.html' %}
 </article>
 
 {% endblock content %}

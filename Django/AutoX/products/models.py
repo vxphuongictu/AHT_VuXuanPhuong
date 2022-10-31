@@ -1,5 +1,45 @@
+from django.contrib.auth import get_user_model
 from django.db import models
+from users.models import *
 # Create your models here.
+
+
+class comment(models.Model):
+    comment_id                      = models.AutoField(primary_key=True)
+    prd                             = models.ForeignKey('Product', on_delete=models.CASCADE)
+    fullname                        = models.CharField(max_length=100, default='', blank=True)
+    email                           = models.CharField(max_length=100, default='', blank=True)
+    msg                             = models.CharField(max_length=500, default='', blank=True)
+    rating                          = models.FloatField(default=0)
+    ip_address                      = models.CharField(max_length=50, blank=True)
+    create_time                     = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.comment_id
+
+    class Meta:
+        db_table                    = 'comment'
+
+class history_order(models.Model):
+    order_data                      = models.CharField(max_length=1000, default='', blank=True)
+    transport_fee                   = models.IntegerField(default=0)
+    total_payment                   = models.IntegerField(default=0)
+    located                         = models.ForeignKey('users.located', on_delete=models.CASCADE)
+    payment_method                  = models.BooleanField(default=0)
+    order_time                      = models.DateField(auto_now_add=True)
+    order_status                    = models.IntegerField(default=0) # 0: Chua order thanh cong, 1: cho xac nhan, 2: da thanh toan, 3: dang chuan bi hang, 4: dang ship
+    invoice_code                    = models.CharField(max_length=500, default='', blank=True)
+    user                            = models.ForeignKey('users.MyUser', on_delete=models.CASCADE)
+
+class cart(models.Model):
+    cart_id                         = models.AutoField(primary_key=True)
+    prd                             = models.ForeignKey('Product', on_delete=models.CASCADE, related_name="cart_prd")
+    quantity                        = models.IntegerField(blank=True)
+    user_id                         = models.IntegerField(blank=True, default='')
+    date_added                      = models.DateField(auto_now_add=True)
+
+    class Meta:
+        db_table                    = 'cart'
 
 class Product(models.Model):
 
@@ -66,7 +106,7 @@ class Categories(models.Model):
 
 class Product_wishlist(models.Model):
     prd             = models.ForeignKey('Product', on_delete=models.CASCADE)
-    user_id         = models.IntegerField(blank=True, default='')
+    user_id         = models.CharField(max_length=200, blank=True, default='')
     date_added      = models.DateField(auto_now_add=True)
 
     class Meta:

@@ -1,0 +1,204 @@
+{% extends 'base_template.html' %}
+{% load humanize %}
+{% load static %}
+{% block title %}AutoX - Checkout details{% endblock title %}
+
+{% block content %}
+<article class="order-result">
+	<section class="located container">
+		<div class="located-body">
+			<div class="header">
+				<h2>
+					<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+					Delivery address
+				</h2>
+			</div>
+
+            <div class="content">
+                <div class="delivery-address">
+                    <span class="msg">
+                    	<div class="fullname">
+                        	<strong>{{ located.fullname }}</strong>
+                        </div>
+                        <div class="phone">
+                        	<span>{{ located.phone }}</span>
+                        </div>
+                        <div class="located">
+                        	<span>{{ located.detail_country }} {{ located.country }}</span>
+                        	&nbsp;
+                        	<div class="default-box">
+	                        	<span class="default-content">default</span>
+	                        </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+		</div>
+	</section>
+
+	<section class="order-details container">
+		<div class="order-details-body">
+			<div class="header">
+				<i class="fa fa-asterisk" aria-hidden="true"></i>&nbsp;
+				<h2>Order details</h2>
+			</div>
+
+			<div class="content">
+				<div class="checkout">
+					<table>
+						<thead>
+							<tr>
+								<td width="40%">Product Name</td>
+								<td width="20%">Unit Price</td>
+								<td width="10%">Quantity</td>
+								<td width="30%">Total Price</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr></tr>
+							{% for item in dataOrder %}
+							<tr>
+								<td class="col-name">
+									<div class="product-img">
+										<img src="/{{ item.product_image }}" alt="{{ item.product_name }}">
+									</div>
+
+									<div class="product-name">
+										<span>{{ item.product_name }}</span>
+									</div>
+								</td>
+
+								<td class="col-price">
+									<span>$ &nbsp; {{ item.product_price|intcomma }}</span>
+								</td>
+
+								<td class="col-quantity">
+									<span>x&nbsp;{{ item.quantity }}</span>
+								</td>
+
+								<td class="col-totalprice">
+									<span>$ &nbsp; {{ item.total_price|intcomma }}</span>
+								</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="order-details-body-mobile">
+			<div class="header">
+				<i class="fa fa-asterisk" aria-hidden="true"></i>&nbsp;
+				<h2>Order details</h2>
+			</div>
+
+			<div class="content">
+				<div class="checkout">
+					{% for item in dataOrder %}
+					<div class="box-item">
+						<div class="product-img">
+							<img src="/{{ item.product_image }}" alt="{{ item.product_name }}">
+						</div>
+						<div class="product-name">
+							<span>{{ item.product_name }}</span>
+							(<span>x{{ item.quantity }}</span>)
+						</div>
+						<div class="total-price">
+							<span>$&nbsp;{{ item.total_price|intcomma }}</span>
+						</div>
+					</div>
+
+					<div class="line"></div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="payment-details container">
+		<div class="payment-details">
+			<div class="shipper-image">
+				<img src="{% static '/images/shipper.png' %}" alt="Shipper">
+			</div>
+			<div class="payment-details-body">
+				<div class="line-group">
+					<div class="total-price">Total price</div>
+					<div class="result-total-price">$ {{ total_payment|intcomma }}</div>
+				</div>
+
+				<div class="line-group">
+					<div class="ship-code">Transport fee</div>
+					<div class="result-ship-price">$ {{ transportFee|intcomma }}</div>
+				</div>
+
+				<div class="line-group">
+					<div class="amount-to-be-paid">Amount to be paid</div>
+					<div class="result-amount-to-be-paid">
+						<span>$ {{ total_payment|intcomma }}</span>
+					</div>
+				</div>
+
+				<div class="line-group">
+	            	<div class="method-group">
+	            		<i class="fa fa-money" aria-hidden="true"></i>&nbsp;
+						<div class="payment-method-content">Payment method</div>
+	            	</div>
+					<div class="payment-method-result">
+						<span>{{ paymentMt }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% if user.is_superuser %}
+		<div class="btn-footer">
+			<div class="box">
+				<button id="btn-order-done">Change</button>
+			</div>
+		</div>
+        {% endif %}
+	</section>
+
+	<section class="popup-change-order">
+		<div class="popup-container">
+			<div class="popup-body">
+				<div class="head">
+					<h2>
+						<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;
+						Change status of the order
+					</h2>
+				</div>
+				<div class="line"></div>
+				<div class="body">
+					<div class="btn-container btn-ship">
+						<button class="shippping" value="4">
+							<i class="fa fa-truck" aria-hidden="true"></i>&nbsp;
+							Shipping
+						</button>
+					</div>
+					<div class="btn-container btn-prepare">
+						<button class="preparing" value="3">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;
+							Preparing order
+						</button>
+					</div>
+					{% csrf_token %}
+				</div>
+
+				<div class="line"></div>
+
+				<div class="foot">
+					<div class="btn-container-foot">
+						<button>Save</button>
+					</div>
+
+					<div class="close-foot">
+						<button>Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</article>
+{% endblock content %}

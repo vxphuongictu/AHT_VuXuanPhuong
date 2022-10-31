@@ -1,0 +1,458 @@
+{% extends 'base_template.html' %}
+{% load humanize %}
+{% block title %}AutoX - Checkout page{% endblock title %}
+
+{% block content %}
+
+<article class="container-fluid checkout-page">
+	<section class="located container">
+		<div class="located-body">
+			<div class="header">
+				<h2>
+					<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+					Delivery address
+				</h2>
+			</div>
+
+            <div class="content">
+                {% if located|length >= 1 %}
+                    <div class="delivery-address">
+                        <span class="msg">
+                        	{% for add in located %}
+                                {% if add.is_default == 1 %}
+                                    <strong>{{ add.fullname }} {{ add.phone }}</strong>&nbsp;
+                                    {{ add.detail_country }} {{ add.country }} &nbsp;
+                                    <div class="default-box">
+                                    	<span class="default-content">default</span>
+                                    </div>
+
+                                    <div class="change-default">
+                                    	<a class="change-address">Change</a>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+
+                        <span class="msg-mobile">
+                        	{% for add in located %}
+                                {% if add.is_default == 1 %}
+                                <div class="info-group">
+                                    <strong class="fullname">{{ add.fullname }}</strong> 
+                                    <strong class="phone">{{ add.phone }}</strong>
+                                    <span class="located-content">{{ add.detail_country }} {{ add.country }}</span>
+                                    <div class="default-box">
+	                                	<span class="default-content">default</span>
+	                                </div>
+                                </div>
+
+                                <div class="change-default">
+                                	<i class="fa fa-angle-right change-address" aria-hidden="true"></i>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                    </div>
+                {% else %}
+                    <span class="msg">
+                    You have not set up a shipping address.
+                    Click&nbsp;<span class="popup-setup-address">Here </span>&nbsp;set the address before making payment
+                    </span>
+                {% endif %}
+            </div>
+		</div>
+	</section>
+
+	<section class="product container">
+		<div class="product-body">
+			<div class="header">
+				<i class="fa fa-product-hunt" aria-hidden="true"></i>&nbsp;
+				<h2>Products</h2>
+			</div>
+
+			<div class="checkout">
+				<table>
+					<thead>
+						<tr>
+							<td width="40%">Product Name</td>
+							<td width="20%">Unit Price</td>
+							<td width="10%">Quantity</td>
+							<td width="30%">Total Price</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr></tr>
+						{% for item in data %}
+						<tr>
+							<td class="col-name">
+								<div class="product-img">
+									<img src="/{{ item.product_image }}" alt="{{ item.product_name }}">
+								</div>
+
+								<div class="product-name">
+									<span>{{ item.product_name }}</span>
+								</div>
+							</td>
+
+							<td class="col-price">
+								<span>$ {{ item.product_price|intcomma }}</span>
+							</td>
+
+							<td class="col-quantity">
+								<span>x&nbsp;{{ item.quantity }}</span>
+							</td>
+
+							<td class="col-totalprice">
+								<span>$ {{ item.total_price|intcomma }}</span>
+							</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<section class="product-mobile container">
+		<div class="product-body">
+			<div class="header">
+				<i class="fa fa-product-hunt" aria-hidden="true"></i>&nbsp;
+				<h2>Products</h2>
+			</div>
+
+			<div class="checkout">
+			{% for item in data %}
+			<div class="product-item">
+				<div class="product-img">
+					<img src="/{{ item.product_image }}" alt="{{ item.product_name }}">
+				</div>
+				<div class="product-info">
+					<div class="product-name">
+						<span>{{ item.product_name }}</span>
+					</div>
+					<div class="product-quantity">
+						<span>x&nbsp;{{ item.quantity }}</span>
+					</div>
+					<div class="col-totalprice-mobile">
+						<span>$ {{ item.total_price|intcomma }}</span>
+					</div>
+				</div>
+
+				<div class="col-totalprice">
+					<span>$ {{ item.total_price|intcomma }}</span>
+				</div>
+			</div>
+			<div class="line"></div>
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="pay-method container">
+		<div class="pay-method-body">
+			<div class="header">
+				<i class="fa fa-money" aria-hidden="true"></i>&nbsp;
+				<h2>Phương thức thanh toán</h2>
+			</div>
+
+			<div class="payment-method">
+				<div class="option">
+					<div class="box">
+						<span value="0" class="content">Thẻ tín dụng/ghi nợ</span>
+						<span class="check"><i class="fa fa-check" aria-hidden="true"></i></span>
+					</div>
+
+					<div class="box">
+						<span value="1" class="content">Thanh toán khi nhận hàng</span>
+						<span class="check"><i class="fa fa-check" aria-hidden="true"></i></span>
+					</div>
+				</div>
+
+				<div class="line"></div>
+
+                <div class="payment-inline">
+                    <div class="payment">
+                        <div class="panel-input">
+                            <div class="header">
+                                <h2 class="span">Payment method</h2>
+                                <div class="card-image">
+                                    <a><i class="fa fa-cc-visa" aria-hidden="true"></i></a>
+                                    <a><i class="fa fa-cc-mastercard" aria-hidden="true"></i></a>
+                                    <a><i class="fa fa-cc-jcb" aria-hidden="true"></i></a>
+                                    <a><i class="fa fa-cc-amex" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="payment-body">
+                                <div class="input-group-inline">
+                                    <div class="input-group">
+                                        <div class="container-input">
+                                            <select name="payment_method" id="payment_method" onchange="get_bank(); check_field();">
+                                            	<option value="">Please select one</option>
+                                                <option value="ATM_ONLINE">Thanh toán bằng thẻ ATM</option>
+                                                <option value="IB_ONLINE">Thanh toán bằng tài khoản ngân hàng/Internet Banking</option>
+                                                <option value="QRCODE">Thanh toán bằng QRCODE</option>
+                                                <option value="CASH_IN_SHOP">Thanh toán tiền mặt tại quầy</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group nganluong">
+                                        <div class="container-input">
+                                            <select class="form-control" name="bank_code" id="bank_code" onchange="check_field();">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group stripe">
+                                        <div class="container-input">
+                                            <input type="email" name="email-payment" id="email-payment" value="" placeholder="Enter your email address">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group card-fullname">
+		                            <div class="container-input">
+		                            	<input type="text" class="form-control" name="card_fullname" id="card_fullname" placeholder="Full name" required onkeypress="nl_get_data_form();" onchange="nl_get_data_form();">
+		                            </div>
+		                        </div>
+
+		                        <div class="input-group card-number">
+		                            <div class="container-input">
+		                            	<input type="text" class="form-control" name="card_number" id="card_number" placeholder="Card number" required onkeypress="nl_get_data_form();" onchange="nl_get_data_form();">
+		                            </div>
+		                        </div>
+
+		                        <div class="input-group-inline">
+			                        <div class="input-group card-month">
+			                            <div class="container-input">
+			                            	<input type="text" pattern="\d*" maxlength="2" class="form-control" name="card_month" id="card_month"  placeholder="Card issue month" required onkeypress="nl_get_data_form();" onchange="nl_get_data_form();">
+			                            </div>
+			                        </div>
+
+			                        <div class="input-group card-year">
+			                            <div class="container-input">
+			                            	<input type="text" pattern="\d*" maxlength="2" class="form-control" name="card_year" id="card_year"  placeholder="Card issue year" required onkeypress="nl_get_data_form();" onchange="nl_get_data_form();">
+			                            </div>
+			                        </div>
+		                        </div>
+
+		                        <div class="input-group-inline">
+			                        <div class="input-group expiration-month">
+			                            <div class="container-input">
+			                            	<input type="text" pattern="\d*" maxlength="2" class="form-control" name="expiration_month" id="expiration_month"  placeholder="Expiration month" required onkeypress="nl_get_data_form();" onchange="nl_get_data_form();">
+			                            </div>
+			                        </div>
+
+			                        <div class="input-group expiration-year">
+			                            <div class="container-input">
+			                            	<input type="text" pattern="\d*" maxlength="2" class="form-control" name="expiration_year" id="expiration_year"  placeholder="Expiration year" required onkeypress="nl_get_data_form();" onchange="nl_get_data_form();">
+			                            </div>
+			                        </div>
+		                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ship-code">
+                        <div class="details">
+                            <div class="total-price">Total price</div>
+                            <div class="result-total-price">$ {{ total_price|intcomma }}</div>
+
+                            <div class="ship-price">Transport fee</div>
+                            <div class="result-ship-price">$ {{ ship_price|intcomma }}</div>
+
+                            <div class="total-pay">Total payment</div>
+                            <div class="result-total-pay">$ {{ total_payment|intcomma }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="order">
+                    <div class="order-body">
+                        <div class="msg">Clicking "ORDER NOW" means you agree to abide by the
+                            <a href="">AutoX Terms</a>
+                        </div>
+                        {% csrf_token %}
+                        <input type="hidden" name="order-data" value="{{ basic_data }}">
+                        <input type="hidden" name="payment_method_autox" id="payment_method_autox" value="1">
+                        <input type="hidden" id="fee_shipping" name="fee_shipping" value="{{ ship_price }}">
+                        <input type="hidden" id="data_card_number" name="data_card_number" value="">
+                        <input type="hidden" id="data_card_fullname" name="data_card_fullname" value="">
+                        <input type="hidden" id="data_card_month" name="data_card_month" value="">
+                        <input type="hidden" id="data_card_year" name="data_card_year" value="">
+                        <input type="hidden" id="stripe_payment" name="stripe_payment" value="0">
+                        <div class="btn-order">
+                            <div class="order-now">
+                                <button type="submit">ORDER NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Popup -->
+	<section class="popup-add-address container">
+		<div class="panel-input">
+			<div class="title">
+				New address
+			</div>
+
+			<div class="input-form">
+				<form action="/products/saveAddress/" method="POST">
+					<div class="form-inline-group">
+						<div class="input-container">
+							<input type="text" name="fullname" id="fullname" placeholder="Enter your full name">
+						</div>
+
+						<div class="input-container">
+							<input type="text" name="phone" id="phone" placeholder="Enter your phone number">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-container">
+							<input type="text" name="country" id="country" placeholder="Enter your country name">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-container">
+							<textarea rows="5" name="detail-country" id="detail-country" placeholder="Enter description for your country"></textarea>
+						</div>
+					</div>
+
+					<div class="type-located">
+						<label for="address-type">Address type: </label>
+						<div class="select-type">
+							<div class="box">
+								<span class="content" value="0">Private House</span>
+							</div>
+
+							<div class="box">
+								<span class="content" value="1">Workplace</span>
+							</div>
+						</div>
+						<input type="hidden" name="addressType" value="" class="addressType">
+					</div>
+
+					<div class="use-to-default">
+						<input type="checkbox" name="set-to-default" id="set-to-default" class="set-to-default"> Use as default address
+					</div>
+
+					{% csrf_token %}
+					<div class="address-footer">
+						<div class="back btn-box">
+							<span>Close</span>
+						</div>
+
+						<div class="save btn-box">
+							<button type="submit" name="save-address">Save</button>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</section>
+
+	<section class="popup-change-address container">
+		<div class="panel-select">
+			<div class="title">
+				My location
+			</div>
+
+			<div class="line"></div>
+
+			<form method="POST" action="/products/updateAddress/">
+				{% for add in located %}
+				<div class="form-select">
+					<div class="radio-btn">
+	                    <input type="radio" name="address" class="address-select" value="{{ add.id }}" {% if add.is_default == 1 %}checked{% endif %}>
+                        {% csrf_token %}
+	                </div>
+					<div class="info-group">
+		                <div class="inline-group">
+		                    <div class="title-name">
+		                        <div class="fullname">{{ add.fullname }}</div>
+		                        <div class="phone-number">{{ add.phone }}</div>
+		                        <div class="located-content">
+									<div class="country">{{ add.country }}</div>
+									<div class="detail-country">{{ add.detail_country }}</div>
+								</div>
+								{% if add.is_default == 1 %}
+								<div class="default-box">
+			                    	<span class="default-content">default</span>
+			                    </div>
+			                    {% endif %}
+		                        <div class="update"><a href="/products/deleteAddress/{{ add.id }}/">Delete</a></div>
+		                    </div>
+		                </div>
+						<div class="located-content">
+							<div class="country">{{ add.country }}</div>
+							<div class="detail-country">{{ add.detail_country }}</div>
+						</div>
+
+						{% if add.is_default == 1 %}
+						<div class="default-box">
+	                    	<span class="default-content">default</span>
+	                    </div>
+	                    {% endif %}
+					</div>
+				</div>
+				{% endfor %}
+				<div class="add-new">
+		        	<div class="border-input">
+		        		<span>+ ADD NEW</span>
+		        	</div>
+		        </div>
+
+		        <div class="confirm-group">
+		        	<div class="btn-box">
+		        		<span>Close</span>
+		        	</div>
+
+		        	<div class="btn-box">
+		        		<button>Update</button>
+		        	</div>
+		        </div>
+		    </form>
+		</div>
+	</section>
+
+	<section class="popup-verify_otp">
+		<div class="popup-verify-panel">
+			<div class="panel-body">
+				<div class="head">
+					<i class="fa fa-check" aria-hidden="true"></i>&nbsp;
+                	<h2>Confirm OTP</h2>
+				</div>
+
+				<div class="body">
+					<div class="form-group">
+		                <div class="container-input">
+		                    <input type="text" maxlength="8" class="form-control" name="otp" id="otp" required placeholder="Enter your OTP code">
+		                </div>
+		                <span class="msg-result">
+		                	<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;
+		                	<p class="msg"></p>
+		                </span>
+		            </div>
+
+		            <input type="hidden" name="csrf_token_verify_otp" value="{{ csrf_token }}">
+		            <input type="hidden" name="list_product">
+		            <input type="hidden" name="order_id">
+		            <div class="form-group">
+		                <div class="container-input">
+		                    <button type="submit">Submit</button>
+		                </div>
+		            </div>
+				</div>
+			</div>
+		</div>
+	</section>
+</article>
+
+{% endblock content %}

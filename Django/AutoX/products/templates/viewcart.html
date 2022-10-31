@@ -1,0 +1,152 @@
+{% extends 'base_template.html' %}
+{% load humanize %}
+{% block title %}AutoX - Your cart{% endblock title %}
+
+{% block content %}
+<article class="container-fluid view-cart">
+	<section class="container list-view-cart">
+        <div class="cart-container">
+		    <table>
+				<thead>
+					<tr>
+						<th class="check-all" width="2%">
+							<input type="checkbox" class="select-all" id="check-all">
+						</th>
+						<th class="product" width="35%">PRODUCT</th>
+						<th class="price" width="15%">UNIT PRICE</th>
+						<th class="quantity" width="10%">QUANTITY</th>
+						<th class="total-price" width="20%">TOTAL PRICE</th>
+						<th class="action" width="10%">ACTION</th>
+					</tr>
+				</thead>
+
+				<tbody>
+	                {% for item in your_cart %}
+					<tr class="product-item" value="{{ item.prd_id }}">
+						<td>
+							<div class="checkbox">
+								<input type="checkbox" id="checkbox-{{ item.prd_id }}" class="checked-prd">
+							</div>
+						</td>
+	                    <td>
+							<div class="product-info">
+	                            <div class="product-image">
+	                            	<a href="/products/detail/{{ item.prd_id }}/"><img src="/{{ item.product_image }}" alt="{{ item.product_name }}"></a>
+	                            </div>
+
+	                            <div class="product-name">
+	                            	<a href="/products/detail/{{ item.prd_id }}/">{{ item.product_name }}</a>
+	                            </div>
+	                        </div>
+						</td>
+	                    <td>
+	                    	<span class="price">{{ item.product_price | intcomma }}</span>
+	                    </td>
+	                    <td>
+	                    	<div class="input-quantity">
+	                    		<span class="down-btn" onclick="downNumber(this, '{{ item.prd_id }}', '{{ csrf_token }}')">
+	                    			-
+	                    		</span>
+	                    		<input type="number" id="quantity-{{ item.prd_id }}" value="{{ item.quantity }}" min="1" step="1" onchange="change_quantity('{{ csrf_token }}', '{{ item.prd_id }}')">
+	                    		<span class="up-btn" onclick="upNumber(this, '{{ item.prd_id }}', '{{ csrf_token }}')">
+	                    			+
+	                    		</span>
+	                    	</div>
+	                	</td>
+	                    <td>
+	                    	<span class="total-price">{{ item.product_price | intcomma }}</span>
+	                    </td>
+	                    <td>
+	                        <div class="btn-delete" onclick="delete_on_cart('{{ item.prd_id }}', '{{ csrf_token }}')">
+	                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+	                        </div>
+	                    </td>
+					</tr>
+	                {% endfor %}
+				</tbody>
+
+				<tfoot>
+					<tr>
+						<th class="check-all" width="2%">
+							<input type="checkbox" class="select-all" id="check-all">
+						</th>
+						<th class="product" width="35%">PRODUCT</th>
+						<th class="price" width="15%">UNIT PRICE</th>
+						<th class="quantity" width="10%">QUANTITY</th>
+						<th class="total-price" width="20%">TOTAL PRICE</th>
+						<th class="action" width="10%">ACTION</th>
+					</tr>
+				</tfoot>
+			</table>
+        </div>
+	</section>
+
+	<section class="container list-view-cart-mobile">
+		<div class="view-container">
+			{% for item in your_cart %}
+			<div class="box-item">
+				<div class="draggable">
+					<div class="product-item" value="{{ item.prd_id }}">
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox-{{ item.prd_id }}" class="checked-prd">
+						</div>
+
+						<div class="product-img">
+							<a href="/products/detail/{{ item.prd_id }}/"><img src="/{{ item.product_image }}" alt="{{ item.product_name }}"></a>
+						</div>
+						<div class="product-info">
+							<div class="product-name">
+								<a href="/products/detail/{{ item.prd_id }}/">{{ item.product_name }}</a>
+							</div>
+							<div class="product-price">
+								<span class="price">{{ item.product_price | intcomma }} VND</span>
+							</div>
+							<div class="input-quantity">
+			            		<span class="down-btn" onclick="downNumber(this, '{{ item.prd_id }}', '{{ csrf_token }}')">
+			            			-
+			            		</span>
+			            		<input type="number" id="quantity-{{ item.prd_id }}" value="{{ item.quantity }}" min="1" step="1" onchange="change_quantity('{{ csrf_token }}', '{{ item.prd_id }}')">
+			            		<span class="up-btn" onclick="upNumber(this, '{{ item.prd_id }}', '{{ csrf_token }}')">
+			            			+
+			            		</span>
+			            	</div>
+						</div>
+						<div class="total-prices">
+							Total price:&nbsp<span class="total-price">{{ item.product_price | intcomma }}</span>
+						</div>
+					</div>
+					<div class="btn-delete-cls">
+						<button onclick="delete_on_cart('{{ item.prd_id }}', '{{ csrf_token }}')" value="{{ item.prd_id }}" class="btn-delete">
+							<i class="fa fa-trash-o" aria-hidden="true"></i>
+						</button>
+	                </div>
+                </div>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+	<section class="container checkout">
+		<div class="panel-checkout">
+			<div class="check-all">
+				<input type="checkbox" class="select-all">
+				<span class="select-all-content">Chọn tất cả ({{ your_cart|length }})</span>
+			</div>
+			<div class="total-price">
+				<span>
+					Tổng thanh toán (<span class="num-product">0</span> sản phẩm): 
+					<span class="result-price">$ <span class="all-price">0</span></span>
+				</span>
+			</div>
+
+			<form action="/products/checkout/" method="POST">
+				<div class="buy">
+					{% csrf_token %}
+					<input type="hidden" name="data" value="" id="data-checkout">
+					<button class="btn-buy" name="checkout">Continue</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+</article>
+{% endblock content %}

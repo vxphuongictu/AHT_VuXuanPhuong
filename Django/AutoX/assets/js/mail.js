@@ -96,7 +96,31 @@ function guest_send_mail(csrf_token){
 				{
 					$('.vehicle-form .content').html('Email has been sent!')
 				} else {
-					$('.vehicle-form .content').html(data.msg)
+					var all_input 	= $('.vehicle-form .form-group .box');
+					jQuery.each(all_input, function(index, element){
+						$(element).css('border', '1px solid #000');
+					});
+					$('.vehicle-form .content').html(data.msg);
+
+					if (data.field_name == false)
+					{
+						$('.vehicle-form .full-name').parents('.box').css('border', '1px solid #ff0505c2');
+					}
+
+					if (data.field_phone == false)
+					{
+						$('.vehicle-form .phone-number').parents('.box').css('border', '1px solid #ff0505c2');
+					}
+
+					if (data.field_mail == false)
+					{
+						$('.vehicle-form .email').parents('.box').css('border', '1px solid #ff0505c2');
+					}
+
+					if (data.field_message == false)
+					{
+						$('.vehicle-form .details').parents('.box').css('border', '1px solid #ff0505c2');
+					}
 				}
 			}
 		});

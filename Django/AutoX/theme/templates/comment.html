@@ -1,0 +1,98 @@
+{% load static %}
+<div class="container">
+    <div class="comment">
+        <h1 class="product_title entry-title">COMMENT</h1>
+        <section class="form">
+            <form method="POST" action="#">
+                <div class="input-group">
+                    <div class="head-group">
+                        <label for="your-comment">Your comment: <span class="important">*</span></label>
+                        <div class="rating">
+                            <span class="star" value="1"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                            <span class="star" value="2"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                            <span class="star" value="3"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                            <span class="star" value="4"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                            <span class="star" value="5"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                    <div class="border-input">
+                        <textarea rows="5" name="your-comment"></textarea>
+                    </div>
+                </div>
+
+                {% if login == False %}
+                <div class="form-inline">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="your-name">Your name: <span class="important">*</span></label>
+                            <div class="border-input">
+                                <input type="text" name="your-name" placeholder="Enter your name" required {% if login == True %} value="{{ user_info.fullname }}" readonly{% endif %}>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="your-email">Your email: <span class="important">*</span></label>
+                            <div class="border-input">
+                                <input type="text" name="your-email" placeholder="Enter your email address" required {% if login == True %} value="{{ user_info.email }}" readonly{% endif %}>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-for-guest{% if login == True %} hidden{% endif %}">
+                        <button type="submit" name="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;SEND</button>
+                    </div>
+                </div>
+                {% else %}
+                    <input type="hidden" name="your-name" placeholder="Enter your name" required {% if login == True %} value="{{ user_info.fullname }}" readonly{% endif %}>
+                    <input type="hidden" name="your-email" placeholder="Enter your email address" required {% if login == True %} value="{{ user_info.email }}" readonly{% endif %}>
+                {% endif %}
+
+                <input type="hidden" name="rating-data" value="0">
+                <input type="hidden" name="product-id" value="{{ product_info.product_id }}">
+                {% csrf_token %}
+
+                <div class="input-group btn{% if login == False %} hidden{% endif %}">
+                    <button type="submit" name="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;SEND</button>
+                </div>
+            </form>
+        </section>
+        <section class="content">
+            {% for item in comment_list %}
+            <div class="msg-content">
+                <div class="user-info">
+                    <div class="avatar">
+                        <a href="#">
+                            <img src="{% if item.avatar %}/{{ item.avatar }}{% else %} {% static '/images/default-avatar.png' %}{% endif %}" alt="{{ item.fullname }}">
+                        </a>
+                    </div>
+                    <div class="name">
+                        <span class="full-name"><a href="#">{{ item.fullname }}</a></span>
+                        <span class="create-time">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <span id="add-time-comment-{{ item.comment_id }}"></span>
+                        </span>
+                        <script type="text/javascript">timeAgo('comment-{{ item.comment_id }}', '{{ item.post_time }}');</script>
+                    </div>
+                    <div class="rate-result">
+                        {% for i in item.total_btn_rate %}
+                            {% if i < item.rating %}
+                                <span class="star" value="{{ i }}"><i class="fa fa-star" aria-hidden="true"></i></span>
+                            {% else %}
+                                <span class="star" value="{{ i }}"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="msg">
+                    <span>{{ item.msg }}</span>
+                </div>
+            </div>
+
+            {% if forloop.counter < comment_list|length %}
+            <div class="line"></div>
+            {% endif %}
+            {% endfor %}
+        </section>
+    </div>
+</div>

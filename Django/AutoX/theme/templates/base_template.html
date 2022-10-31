@@ -6,20 +6,30 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="icon" type="image/x-icon" href="{% static '/images/oneshift-by-carousell-logo-1.svg' %}">
 
 	<!-- style -->
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&#038;ver=6.0.2' media='all' />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 	<!-- end style -->
 
 	<!-- script -->
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src='https://kit.fontawesome.com/f1af41e397.js?ver=6.0.2' id='fontawesome-js'></script>
+    <script src="https://use.fontawesome.com/ddc3d1283a.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<!-- end script -->
 
 	<!-- static style -->
 	<link rel='stylesheet' href="{% static 'style/main-style.css' %}" media='all' />
 	<link rel='stylesheet' href="{% static 'style/loader.css' %}" media='all' />
 	<link rel='stylesheet' href="{% static 'style/responsive.css' %}" media='all' />
+    <link rel='stylesheet' href="{% static 'style/animation.css' %}" media='all' />
+
+    <!-- datatables  -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
 	<!-- end static style -->
 
 	<!-- static script -->
@@ -36,7 +46,20 @@
     <script src="{% static 'js/login.js' %}"></script>
     <script src="{% static 'js/home.js' %}"></script>
     <script src="{% static 'js/single-product.js' %}"></script>
+    <script src="{% static 'js/add-cart.js' %}"></script>
+    <script src="{% static 'js/comment.js' %}"></script>
+    <script src="{% static 'js/accounts.js' %}"></script>
+    <script src="{% static 'js/effect.js' %}"></script>
+    <script src="{% static 'js/nganluong.js' %}"></script>
+    <script src="{% static 'js/order.js' %}"></script>
+    <script src="{% static 'js/checkout.js' %}"></script>
+    <script src="{% static 'js/jquery.ui.touch-punch.min.js' %}"></script>
+    <script src="{% static 'js/stripe.js' %}"></script>
 	<!-- end static script -->
+
+    <!-- stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+
     <title>{% block title %} {% endblock title %}</title>
 
 </head>
@@ -75,24 +98,7 @@
                         </ul>
                     </li>
                     <li id="menu-item-301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-301">
-                        <a>ABOUT</a>
-                        <ul class="sub-menu">
-                            <li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297">
-                                <a href="/">ABOUT 1</a>
-                            </li>
-                            <li id="menu-item-296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-296">
-                                <a href="/">ABOUT 2</a>
-                            </li>
-                            <li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295">
-                                <a href="/">ABOUT 3</a>
-                            </li>
-                            <li id="menu-item-293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293">
-                                <a href="/">ABOUT 4</a>
-                            </li>
-                            <li id="menu-item-294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-294">
-                                <a href="/">ABOUT 5</a>
-                            </li>
-                        </ul>
+                        <a href="/about/">ABOUT</a>
                     </li>
                     <li id="menu-item-302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-302">
                         <a>SELL YOUR CAR</a>
@@ -123,7 +129,7 @@
                     <li id="menu-item-364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364">
                         <div class="href-link-none-user">
                             <a href="/users/">
-                                <span class="text-link-none-user">Login/Registration</span>
+                                &nbsp;<span class="text-link-none-user">Login/Registration</span>
                             </a>
                         </div>
                     </li>
@@ -133,15 +139,31 @@
             {% else %}
 
             <!-- Logged in user -->
-            <img alt='' src='{% if user.avatar != "" %}http://{{ request.META.HTTP_HOST }}/{{ user.avatar }}{% else %}{% static 'images/default-avatar.png' %}{% endif %}' class='avatar avatar-40 photo' height='40' width='40' loading='lazy'/>
+            <img alt='' src='http://{{ request.META.HTTP_HOST }}{% if user.avatar %}/{{ user.avatar }}{% else %}/uploads/default-avatar.png{% endif %}' class='avatar avatar-40 photo' height='40' width='40' loading='lazy'/>
             <div class="user-name">
                 <span class="text-link-logged-user">{{ user.fullname }}</span>
             </div>
             <i class="fa fa-angle-down" aria-hidden="true"></i>
 
             <div class="drop-down-menu">
+
+                <div class="account">
+                    <a href="/users/profile/">
+                        <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        <span>ACCOUNT</span>
+                    </a>
+                </div>
+
+                <div class="cart">
+                    <a href="/products/cart/">
+                        <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        <span>YOUR CART</span>
+                    </a>
+                </div>
+
                 <div class="logout">
                     <a href="/users/logout/">
+                        <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
                         <span>LOGOUT</span>
                     </a>
                 </div>
@@ -162,10 +184,13 @@
 
 		<div class="avatar">
 			<!-- avatar user -->
-			<img alt="" src="{% if login is True %}{{ user.avatar }}{% else %}{% static 'images/default-avatar.png' %}{% endif %}" class="avatar" height="100" width="100">
+            <div class="avatar-container">
+			     <img alt='' src='http://{{ request.META.HTTP_HOST }}{% if user.avatar %}/{{ user.avatar }}{% else %}/uploads/default-avatar.png{% endif %}' class='avatar avatar-40 photo' height='40' width='40' loading='lazy'/>
+            </div>
+            
 			<span class="avatar-content">
 				{% if login is True %}
-                    {{ user.fullname }}
+                    <p>{{ user.fullname }}</p>
                 {% else %}
                 <p>Welcome!</p>
                 {% endif %}
@@ -185,9 +210,11 @@
         <div class="first-menu">
             <ul id="menu-header-menu-middle-1" class="menu">
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-365 current_page_item menu-item-581">
+                    <i class="fa fa-home" aria-hidden="true"></i>
                     <a href="/" aria-current="page">HOME</a>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-300">
+                    <i class="fa fa-play" aria-hidden="true"></i>
                     <a>START BIDDING</a>
                     <ul class="sub-menu" style="display: none;">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-299">
@@ -199,26 +226,11 @@
                     </ul>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-301">
-                    <a>ABOUT</a>
-                    <ul class="sub-menu" style="display: none;">
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297">
-                            <a href="/">ABOUT 1</a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-296">
-                            <a href="/">ABOUT 2</a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295">
-                            <a href="/">ABOUT 3</a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293">
-                            <a href="/">ABOUT 4</a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-294">
-                            <a href="/">ABOUT 5</a>
-                        </li>
-                    </ul>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <a href="/about/">ABOUT</a>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-302">
+                    <i class="fa fa-money" aria-hidden="true"></i>
                     <a>SELL YOUR CAR</a>
                     <ul class="sub-menu" style="display: none;">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-292">
@@ -235,34 +247,48 @@
                         </li>
                     </ul>
                 </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-301">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <a href="/products/cart/">YOUR CART</a>
+                </li>
+
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-301">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <a href="/users/profile/">ACCOUNTS</a>
+                </li>
             </ul>
         </div>
 
 		{% if login is True %}
 		<div class="logout">
-			<a href="<?php echo get_template_directory_uri() . '/logout'?>">
+			<a href="/users/logout/">
 				<i class="fa fa-sign-out" aria-hidden="true"></i>
 				<span>LOGOUT</span>
 			</a>
 		</div>
         {% endif %}
-		<div class="social">
-            <div class="box-border">
-                <a href="#">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
+
+        <div class="blank-block"></div>
+
+        <div class="social-container">
+    		<div class="social">
+                <div class="box-border">
+                    <a href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="box-border">
+                    <a href="#">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="box-border">
+                    <a href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
-            <div class="box-border">
-                <a href="#">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="box-border">
-                <a href="#">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
+        </div>  
 	</section>
 </aside>
 <body class="home {% if login is False %}home-for-none-user{% endif %}">
@@ -379,5 +405,8 @@
         </section>
     </article>
 </footer>
+<a class="go-to-top" href="#header">
+    <i class="fas fa-arrow-up"></i>
+</a>
 </body>
 </html>

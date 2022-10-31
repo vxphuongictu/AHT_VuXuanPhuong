@@ -3,11 +3,8 @@
 {% for prd in data %}
     {% if forloop.counter <= max_item %}
     <script> makeTimer('{{ prd.product_id }}', '{{ prd.attributes.time_remaining }}'); </script>
-    <div class="product-item {% if login is False %}set-width-50{% endif %}">
-    {% if login is True %}
-        <!-- For Logged In User -->
+    <div class="product-item">
         <div class="item-group-home-user">
-            <!-- Logged in account -->
             <div class="item-group-home-user__link">
                 <a class="user-logged-in" href="/products/detail/{{ prd.product_id }}/">
                     <div class="image-item">
@@ -81,8 +78,8 @@
                                         <div class="icon">
                                             <img src="{% static 'images/Vector-5.png' %}" alt="">
                                         </div>
-                                        <span class="content">Auction Price:</span>
-                                        <span class="sub-content">{{ prd.product_price|intcomma }} VND</span>
+                                        <span class="content">Price:</span>
+                                        <span class="sub-content">$ {{ prd.product_price|intcomma }}</span>
                                     </div>
                                     {% endif %}
                                 </div>
@@ -91,115 +88,25 @@
                     </a>
                 </div>
 
-                <div class="item-quote">
-                    <h2>
-                        <span class="title-quote">Quick quote</span>
-                    </h2>
-
-                    <div id="result-quick-quote-{{ prd.product_id }}" class="result-quick-quote"></div>
-
-                    <div class="form-quote-groups">
-                        <div class="form-quote">
-                            <input type="text" id="quick-quote-message-{{ prd.product_id }}" placeholder="Enter quote for this vehicle">
-                            <button type="submit" onclick="user_send_mail(this, '{{ csrf_token }}')" id="btn-submit-quick-quote-{{ prd.product_id }}" class="btn-submit-quick-quote" value="{{ prd.product_id }}">Submit</button>
-                        </div>
+                <div class="add-cart">
+                    <div class="btn-favorite">
+                        <i class="{% if prd.product_id in wishlist %}fa fa-heart{% else %}fa fa-heart-o{% endif %}" aria-hidden="true" id="product-{{ prd.product_id }}" onclick="wishList('{{ prd.product_id }}', '{{ csrf_token }}', 'home');"></i>
                     </div>
+                    <button class="btn-favorite" id="product-{{ prd.product_id }}" onclick="wishList('{{ prd.product_id }}', '{{ csrf_token }}', 'home');">
+                        <i class="{% if prd.product_id in wishlist %}fa fa-heart{% else %}fa fa-heart-o{% endif %}" aria-hidden="true"></i>
+                    </button>
 
-                    {% if prd.attributes.time_remaining %}
-                    <div class="remaining-time">
-                        <div class="icon">
-                            <img src="{% static 'images/Group-128.png' %}" alt="">
-                        </div>
-                        <span class="content">Time remaining:</span>
-                        <span class="sub-content">
-                            <span id="days-{{ prd.product_id }}">
-                                <span style="color: red;"> finished</span>
-                            </span>
-                            <span id="hours-{{ prd.product_id }}"></span>
-                            <span id="minutes-{{ prd.product_id }}"></span>
-                        </span>
+                    {% if login == True %}
+                    <div class="btn-add-to-cart" onclick="addCart(this, '{{ prd.product_id }}')">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
                     </div>
+                    <button class="btn-add-to-cart" onclick="addCart(this, '{{ prd.product_id }}')">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    </button>
                     {% endif %}
                 </div>
-
-                <div class="btn-favorite">
-                    <i class="{% if prd.product_id in wishlist %}fa fa-heart{% else %}fa fa-heart-o{% endif %}" aria-hidden="true" id="product-{{ prd.product_id }}" onclick="wishList('{{ prd.product_id }}', '{{ csrf_token }}', 'home');"></i>
-                </div>
             </div>
         </div>
-        <!-- End For Logged In User -->
-    {% else %}
-        <!-- For Guest-->
-        <div class="item-group-none-user">
-        <!-- Guest Account -->
-            <div class="item-group-none-user__link">
-                <a class="guest-account" href="/products/detail/{{ prd.product_id }}/">
-                    <div class="image-item">
-                       <img class="product-image" src="{{ prd.product_image }}">
-                    </div>
-                </a>
-
-                <div class="item-information">
-                    <a href="/products/detail/{{ prd.product_id }}/">
-                        <div class="product-name">
-                            <h2>
-                                <span class="content title-name">{{ prd.product_name }}</span>
-                                <span class="content title-name short-description">{{ prd.prd_short_name }}</span>
-                            </h2>
-                        </div>
-
-                        <div class="more-info">
-                            <div class="group-info">
-                                <div class="more-info-line-1">
-                                    {% if prd.attributes.post_time %}
-                                    <div class="time">
-                                        <div class="icon">
-                                            <img src="{% static 'images/Group-11.png' %}" alt="">
-                                        </div>
-                                        <span class="content">{{ prd.attributes.post_time }}</span>
-                                    </div>
-                                    {% endif %}
-
-                                    {% if prd.attributes.kilometer %}
-                                    <div class="kilometer">
-                                        <div class="icon">
-                                            <img src="{% static 'images/Vector-3.png' %}" alt="">
-                                        </div>
-                                        <span class="content">{{ prd.attributes.kilometer|intcomma }} km</span>
-                                    </div>
-                                    {% endif %}
-                                </div>
-
-                                <div class="more-info-line-2">
-                                    {% if prd.attributes.cheaper %}
-                                    <div class="cheaper">
-                                        <div class="icon">
-                                            <img src="{% static 'images/Vector-7.png' %}" alt="">
-                                        </div>
-                                        <span class="content">{{ prd.attributes.cheaper|intcomma }} VND Cheaper</span>
-                                    </div>
-                                    {% endif %}
-                                </div>
-
-                                <div class="more-info-line-3">
-                                    {% if prd.product_price %}
-                                    <div class="price">
-                                        <div class="icon">
-                                            <img src="{% static 'images/Vector-5.png' %}" alt="">
-                                        </div>
-                                        <span class="content">Auction Price:</span>
-                                        <span class="sub-content">{{ prd.product_price|intcomma }} VND</span>
-                                    </div>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- End For Guest -->
-    {% endif %}
     </div>
     {% endif %}
 {% endfor %}

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row padding-bot-30">
+        <div class="text-center">
+            <h2>Thanh toán QRCODE</h2>
+        </div>
+    </div>
+    {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading"></div>
+                <div class="panel-body">
+                    <div class="col-md-6 col-md-offset-3">
+                        <img src='data:image/png;base64,{{ qr_data }}'/>
+                    </div>
+                    <div class="col-md-12">
+                        <p style="font-size: 18px;font-weight: bold;">You need to scan QR Code by Mobile Banking App to complete the payment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

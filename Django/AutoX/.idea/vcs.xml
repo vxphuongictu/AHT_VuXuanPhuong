@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/autox-django" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python-getting-started" vcs="Git" />
   </component>
 </project>

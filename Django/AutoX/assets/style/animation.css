@@ -1,0 +1,14 @@
+@keyframes menuOpen {
+	from {left: -60%;}
+	to {left: 0%;}
+}
+
+@keyframes menuClose {
+	from {left: 0%;}
+	to {left: -60%;}
+}
+
+@keyframes panelClose {
+	from {left: 0%;}
+	to {left: -60%;}
+}

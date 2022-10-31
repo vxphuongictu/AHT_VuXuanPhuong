@@ -4,7 +4,7 @@ var page_name_log 		= "";
 var csrf_token_log		= "";
 var box_name 		 	= "biddings"; // default box
 var cat_id 		 		= 0; // default cat is All
-var max_item_per_page 	= 5; // default
+var max_item_per_page 	= 6; // default
 var wishlist_arr		= [];
 
 function home(csrf_token, page_name)
@@ -68,7 +68,7 @@ function home(csrf_token, page_name)
 		}
 	});
 
-	setTimeout(home, 60000);
+	// setTimeout(home, 60000);
 }
 /* Get data on db end */
 

@@ -67,4 +67,37 @@ $(document).ready(function(){
 	});
 
 	/* Hidden Menu When Click Another Location End */
+
+	/* wishlist */
+	$('body').on('click', '.btn-favorite', function(){
+		var target 		= $(this);
+		$(target).css('animation', 'add-cart .5s');
+		setTimeout(function(){
+			$(target).css('animation', '');
+		}, 1000);
+
+	});
+	/* end wishlist */
+
+	/* add to cart */
+	$('body').on('click', '.btn-add-to-cart', function(){
+		var target 		= $(this);
+		$(target).css('animation', 'add-cart .5s');
+		setTimeout(function(){
+			$(target).css('animation', '');
+		}, 1000);
+
+	});
+	/* end add to cart */
+
+	/* delete cart */
+	$('body').on('click', '.cart-container .btn-delete', function(){
+		var target 		= $(this);
+		$(target).css('animation', 'add-cart .5s');
+		setTimeout(function(){
+			$(target).css('animation', '');
+		}, 1000);
+
+	});
+	/* end delete cart */
 });

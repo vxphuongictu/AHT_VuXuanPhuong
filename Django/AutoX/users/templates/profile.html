@@ -1,0 +1,439 @@
+{% extends 'base_template.html' %}
+{% load humanize %}
+{% block title %}AutoX - {{ user.fullname }}{% endblock title %}
+
+{% block content %}
+<article class="container profile-container">
+	<section class="col-left">
+		<div class="panel-header">
+			<h2>Account</h2>
+			<span class="setting-icon">
+				<i class="fa fa-user" aria-hidden="true"></i>
+			</span>
+		</div>
+		<div class="main-profile">
+			<div class="avatar">
+				<img src="/{{ user.avatar }}" alt="{{ user.fullname }}">
+			</div>
+			<div class="name">
+				<span class="fullname">{{ user.fullname }}</span>
+				<span class="username">{{ user.username }}</span>
+			</div>
+			<div class="list-menu">
+				<ul class="main-menu">
+					<li class="update-information">
+						<a>
+							<i class="fa fa-cogs" aria-hidden="true"></i>
+							Settings
+						</a>
+					</li>
+
+					<li class="your-wishlist">
+						<a>
+							<i class="fa fa-heart" aria-hidden="true"></i>
+							Favourite products
+						</a>
+					</li>
+
+					<li class="orders-manage">
+						<a>
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+							Your orders
+						</a>
+					</li>
+
+					{% if user.is_superuser %}
+					<li class="orders-admin">
+						<a>
+							<i class="fa fa-product-hunt" aria-hidden="true"></i>
+							Order management
+						</a>
+					</li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="col-right panel-info">
+		<div class="information">
+			<div class="panel-header">
+				<h2>Settings</h2>
+				<span class="setting-icon">
+					<i class="fa fa-cog" aria-hidden="true"></i>
+				</span>
+			</div>
+
+			<div class="panel-body">
+				<h3>Personal information</h3>
+				<div class="line"></div>
+				<table>
+					<tbody>
+						<tr class="register-date">
+							<td><label for="register-date">Register date</label></td>
+							<td><span class="reg-date">{{ user.date_joined }}</span></td>
+						</tr>
+						<tr class="username">
+							<td><label for="username">Username</label></td>
+							<td><span class="user">{{ user.username }}</span></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="panel-update-information">
+					<h3>Update information</h3>
+					<div class="line"></div>
+
+					<table class="form-input">
+                        <tbody>
+                            <tr class="full-name">
+                                <td>
+                                    <label class="full-name">Full name</label>
+                                </td>
+                                <td>
+                                    <div class="input-container">
+                                        <input type="text" id="full-name" placeholder="" value="{{ user.fullname }}">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="email">
+                                <td>
+                                    <label class="email">Email</label>
+                                </td>
+                                <td>
+                                    <div class="input-container">
+                                        <input type="email" id="email" placeholder="" value="{{ user.email }}">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="phone">
+                                <td>
+                                    <label class="phone">Phone number</label>
+                                </td>
+                                <td>
+                                    <div class="input-container">
+                                        <input type="phone" id="phone" placeholder="" value="{{ user.phone }}">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="avatar">
+                                <td>
+                                    <label class="avatar">Avatar</label>
+                                </td>
+                                <td>
+                                    <input type="file" id="avatar" accept="image/png, image/jpeg">
+                                </td>
+                            </tr>
+
+                            <tr class="current-password">
+                                <td>
+                                    <label class="current-password">Current Password</label>
+                                </td>
+                                <td>
+                                    <div class="input-container">
+                                        <input type="password" id="current-password" placeholder="" value="">
+                                    </div>
+                                    <p class="current-password-msg"></p>
+                                </td>
+                            </tr>
+
+                            <tr class="new-password">
+                                <td>
+                                    <label class="new-password">New Password</label>
+                                </td>
+                                <td>
+                                    <div class="input-container">
+                                        <input type="password" id="new-password" placeholder="" value="">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="confirm-password">
+                                <td>
+                                    <label class="confirm-password">Confirm Password</label>
+                                </td>
+                                <td>
+                                    <div class="input-container">
+                                        <input type="password" id="confirm-password" placeholder="" value="">
+                                        <input type="hidden" id="csrf_token" value="{{ csrf_token }}">
+                                    </div>
+                                    <p class="password-msg"></p>
+                                </td>
+                            </tr>
+
+                            <tr class="btn-submit">
+                                <td>
+                                    <button id="update-information" class="btn btn-primary">Update</button>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="wishlist">
+			<div class="panel-header">
+				<h2>Wishlist</h2>
+				<span class="setting-icon">
+					<i class="fa fa-heart" aria-hidden="true"></i>
+				</span>
+			</div>
+
+			<div class="panel-body">
+				<table id=wishlist>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Product Name</th>
+							<th>Unit Price</th>
+							<th>Stock Status</th>
+                            <th width="5%"></th>
+                            <th width="5%"></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in wishlist %}
+						<tr>
+							<td data-label="#">
+								<span>{{ forloop.counter }}</span>
+							</td>
+							<td data-label="Product Name">
+								<div class="product-info">
+									<div class="product-img">
+										<a href="/products/detail/{{ item.product_id }}/">
+											<img src="/{{ item.product_image }}" src="{{ product_name }}">
+										</a>
+									</div>
+									<div class="product-name">
+										<a href="/products/detail/{{ item.product_id }}/">{{ item.product_name }}</a>
+									</div>
+								</div>
+							</td>
+							<td data-label="Unit Price">
+								<span>$ {{ item.product_price | intcomma }}</span>
+							</td>
+							<td data-label="Stock Status">
+								<span>Instock</span>
+							</td>
+							<td data-label="Add Cart">
+								<div class="btn-add-to-cart" onclick="addCartFromWishList(this, '{{ item.product_id }}')">
+			                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+			                    </div>
+							</td>
+							<td data-label="Delete wishlist">
+								<div class="btn-delete-wishlist" onclick="wishList('{{ item.product_id }}', '{{ csrf_token }}', '')">
+			                        <i class="fa fa-trash" aria-hidden="true"></i>
+			                    </div>
+							</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>#</th>
+							<th>Product Name</th>
+							<th>Unit Price</th>
+							<th>Stock Status</th>
+                            <th width="5%"></th>
+                            <th width="5%"></th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+
+		<div class="manage">
+            <div class="panel-header">
+				<h2>Manage</h2>
+				<span class="setting-icon">
+					<i class="fa fa-cart-plus" aria-hidden="true"></i>
+				</span>
+			</div>
+            <div class="panel-body">
+                {% for order in order_by_id %}
+                    <div class="order-container">
+                        <div class="header">
+                            <div class="order-status">
+                                <label for="order-status">Status: </label>
+                                <span class="order-content">
+                                    {% if order.order_status == 1 %}
+                                        <span class="wait-confirm">Waiting</span>
+                                    {% elif order.order_status == 2 %}
+                                        <span class="paid">Paid</span>
+                                    {% elif order.order_status == 3 %}
+                                        <span class="pending">Preparing</span>
+                                    {% elif order.order_status == 4 %}
+                                    	<span class="shipping">Shipping</span>
+                                    {% endif %}
+                                </span>
+                            </div>
+                            <div class="total-price">
+                                <label for="total-payment">Total payment: </label>
+                                <span class="total-payment-content">$ {{ order.total_payment|intcomma }}</span>
+                            </div>
+                            <div class="view-details">
+                            	<a href="/products/order-detail/{{ order.order_id }}/">
+                            		<i class="fa fa-eye" aria-hidden="true"></i>
+                            		<span>view</span>
+                            	</a>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="order-info">
+                            {% for item in order.product_info %}
+                            <a href="/products/detail/{{ item.product_id }}/">
+                                <div class="item-body">
+                                <div class="prd-image">
+                                    <img src="/{{ item.product_image }}" alt="{{ item.product_name }}">
+                                </div>
+
+                                <div class="product-info">
+                                    <div class="prd-name">{{ item.product_name }}</div>
+                                    <div class="prd-quantity">x{{ item.product_quantity }}</div>
+                                </div>
+
+                                <div class="product-price">$ {{ item.product_price|intcomma }}</div>
+                            </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                        <div class="line"></div>
+                        {% csrf_token %}
+                        <div class="footer-btn">
+                            <div class="cancel-btn">
+                                <button value="{{ order.order_id }}" onclick="cancel_order(this);"{% if order.order_status > 1 %}disabled{% endif %}>Order Cancellation</button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+		</div>
+
+		<div class="admin">
+			<div class="panel-header">
+				<h2>Order Management</h2>
+				<span class="setting-icon">
+					<i class="fa fa-product-hunt" aria-hidden="true"></i>
+				</span>
+			</div>
+            <div class="panel-body">
+            	<div class="border-container">
+            		<table id="order-management-admin">
+						<thead>
+							<tr>
+								<th class="th-sm">
+									<span class="content">#</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Order ID</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Product Name</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Address</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Date</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Price</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Status</span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for orders in order_manage %}
+								<tr id="{{ orders.order_id }}">
+									<td data-label="#">
+										<span class="content">{{ forloop.counter }}</span>
+									</td>
+									<td data-label="Order ID">
+										<span class="content">{{ orders.order_id }}</span>
+									</td>
+									<td data-label="Product Name">
+										<span class="content product-name">
+											<div class="thumbnail">
+												<img src="/{{ orders.product_info.0.product_image }}" alt="{{ orders.product_info.0.product_name }}">
+											</div>
+											<div class="name">
+												{{ orders.product_info.0.product_name }}
+											</div>
+										</span>
+									</td>
+									<td data-label="Address">
+										<span class="content">{{ orders.located_data.country }}</span>
+									</td>
+									<td data-label="Date">
+										<span class="content">{{ orders.order_time }}</span>
+									</td>
+									<td data-label="Price">
+										<span class="content">$ {{ orders.product_info.0.product_price | intcomma }}</span>
+									</td>
+									<td data-label="Status">
+										<span class="content">
+                                            {% if orders.order_status == 0 %}
+                                                <div class="box-msg cancel">
+                                                    Wait for confirmation
+                                                </div>
+											{% elif orders.order_status == 1 %}
+                                                <div class="box-msg wait-confirm">
+                                                    Waiting
+                                                </div>
+		                                    {% elif orders.order_status == 2 %}
+                                                <div class="box-msg paid">
+		                                            Paid
+                                                </div>
+		                                    {% elif orders.order_status == 3 %}
+                                                <div class="box-msg pending">
+		                                            Preparing
+                                                </div>
+		                                    {% elif orders.order_status == 4 %}
+                                                <div class="box-msg shipping">
+		                                    	    Shipping
+                                                </div>
+		                                    {% endif %}
+										</span>
+									</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+						<tfoot>
+							<tr>
+								<th class="th-sm">
+									<span class="content">#</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Order ID</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Product Name</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Address</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Date</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Price</span>
+								</th>
+								<th class="th-sm">
+									<span class="content">Status</span>
+								</th>
+							</tr>
+						</tfoot>
+					</table>
+            	</div>
+            </div>
+		</div>
+	</section>
+</article>
+{% endblock content %}

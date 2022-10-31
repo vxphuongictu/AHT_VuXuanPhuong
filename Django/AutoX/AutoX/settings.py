@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-s%b@su+2$^^1&2)u-i&^09pvua@r_h=&i%r8w9@1vs(@%cpuh$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '192.168.1.42', '127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'rest.apps.RestConfig',
     'django.contrib.humanize',
-    'mail.apps.MailConfig'
+    'mail.apps.MailConfig',
+    'about.apps.AboutConfig',
+    'nganluong.apps.NganluongConfig'
 ]
 
 # More information at https://shareeverythings.com/lap-trinh/huong-dan-lap-trinh-web-python-django-restful-api-framework/
@@ -107,6 +109,17 @@ DATABASES = {
         'PORT'      : '3306'
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE':   'django.db.backends.mysql',
+#         'NAME'      : 'heroku_aac02b3bf470cc7',
+#         'USER'      : 'bc7856a1c5e43c',
+#         'PASSWORD'  : '2c8dbba6',
+#         'HOST'      : 'us-cdbr-east-06.cleardb.net',
+#         'PORT'      : '3306'
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -170,3 +183,11 @@ EMAIL_USE_SSL   = False
 
 # Email to receive information #
 RECEIVE_MAIL    = "Vxphuongictu998@gmail.com"
+
+PASSWORD_RESET_TIMEOUT = 86400 # 24 hours
+
+STATIC_ROOT     = os.path.join(BASE_DIR, 'staticfile')
+
+if DEBUG:
+    STRIPE_SECRET_KEY   = 'sk_test_51LxN7XGJqKLBeEi3xrkicBrbKyqD0vDRkri353VbQgWgruqFQhMmW7uzbczYGX4DBhkbdTEiFz2wGeS15aAoFtmc007OJxtbLr'
+    STRIPE_PUBLIC_KEY   = 'pk_test_51LxN7XGJqKLBeEi3fUQfPStpw4vkGAt0Z1EruqdRWz1xFOpqLsuMAGnosRvbSaW4aK6SCIdhkLkzfiXiAzJwWVPy00HmU1z5VX'
